@@ -15,6 +15,9 @@ public class GUI extends JFrame {
     public GUI() {
         initComponents();
     }
+    public static void main(String[] args){
+        new GUI();
+    }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -117,5 +120,6 @@ public class GUI extends JFrame {
     private JLabel label5;
     private JButton button4;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
+
 
 }
