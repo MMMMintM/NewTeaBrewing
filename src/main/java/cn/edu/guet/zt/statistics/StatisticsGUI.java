@@ -7,12 +7,14 @@ package cn.edu.guet.zt.statistics;
 import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
 import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
 import cn.edu.guet.hld.bean.MilkeTea;
+import cn.edu.guet.zt.statistics.util.GetTable;
 
 import java.awt.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * 销量统计
@@ -39,6 +41,16 @@ public class StatisticsGUI extends JFrame {
         label5 = new JLabel();
         button4 = new JButton();
 
+        GetTable getTable = new GetTable();
+
+        DefaultTableModel tableModel = new DefaultTableModel(GetTable.queryDate(sql[0],data,head),head){
+            public boolean isCellEditable(int row,int colume){
+                return false;
+            }
+        };
+
+        table1.setModel(tableModel);
+
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
@@ -56,14 +68,34 @@ public class StatisticsGUI extends JFrame {
         label1.setBounds(new Rectangle(new Point(10, 10), label1.getPreferredSize()));
 
         //---- button1 ----
-        button1.setText("\u9500\u552e\u91cf");
+        button1.setText("销售量");
         contentPane.add(button1);
         button1.setBounds(new Rectangle(new Point(40, 35), button1.getPreferredSize()));
+        button1.addActionListener(
+                e->{
+                    DefaultTableModel tableModelV = new DefaultTableModel(GetTable.queryDate(sql[1],data,head),head){
+                        public boolean isCellEditable(int row,int colume){
+                            return false;
+                        }
+                    };
+                    table1.setModel(tableModelV);
+                }
+        );
 
         //---- button2 ----
-        button2.setText("\u9500\u552e\u989d");
+        button2.setText("销售额");
         contentPane.add(button2);
         button2.setBounds(new Rectangle(new Point(40, 75), button2.getPreferredSize()));
+        button2.addActionListener(
+                e->{
+                    DefaultTableModel tableModelV = new DefaultTableModel(GetTable.queryDate(sql[2],data,head),head){
+                        public boolean isCellEditable(int row,int colume){
+                            return false;
+                        }
+                    };
+                    table1.setModel(tableModelV);
+                }
+        );
 
         //---- label2 ----
         label2.setText("\u7d22\u5f15");
@@ -124,9 +156,16 @@ public class StatisticsGUI extends JFrame {
     private JButton button3;
     private JLabel label5;
     private JButton button4;
+    private Object[][] data = null;
+    private String head[] = {"商品ID","总销售量","总销售额"};
+    private String sql[] = {
+            "SELECT * FROM sales_volume",
+            "SELECT * FROM sales_volume ORDER BY volume DESC",
+            "SELECT * FROM sales_volume ORDER BY total_sales DESC"
+    };
 
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) {
-        new GUI();
+        new StatisticsGUI();
     }
 }
