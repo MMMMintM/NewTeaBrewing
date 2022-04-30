@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/cn/wzx/Item.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/cn/wzx/Login.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/cn/wzx/Main.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/cn/wzx/Password.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/cn/wzx/Register.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/cn/wzx/UpdateItem.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Item.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Password.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/UpdateItem.java" charset="UTF-8" />
   </component>
 </project>

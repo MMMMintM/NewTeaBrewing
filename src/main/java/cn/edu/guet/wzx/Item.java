@@ -1,4 +1,4 @@
-package cn.wzx;
+package cn.edu.guet.wzx;
 
 import java.util.Objects;
 

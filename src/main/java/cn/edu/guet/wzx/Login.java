@@ -1,4 +1,4 @@
-package cn.wzx;
+package cn.edu.guet.wzx;
 
 import javax.swing.*;
 import java.awt.*;
@@ -54,7 +54,7 @@ public class Login extends JFrame {
         radioButton1.setBounds(new Rectangle(new Point(140, 160), radioButton1.getPreferredSize()));
 
         //---- radioButton2 ----
-        radioButton2.setText("ÉÌ¼Ò");
+        radioButton2.setText("ï¿½Ì¼ï¿½");
         contentPane.add(radioButton2);
         radioButton2.setBounds(new Rectangle(new Point(210, 160), radioButton2.getPreferredSize()));
 
@@ -64,10 +64,10 @@ public class Login extends JFrame {
         button1.addActionListener(
                 (e) -> {
                     /*
-                    1¡¢ÄÃµ½µÇÂ¼½çÃæµÄÓÃ»§ÃûºÍÃÜÂë
-                    2¡¢È¥ºÍÊý¾Ý¿âÖÐµÄÓÃ»§ÃûºÍÃÜÂë±È¶Ô
-                    3¡¢´´½¨ÁËÊý¾Ý¿âºÍ±í
-                    4¡¢Ìí¼ÓÒ»Ìõ¼ÇÂ¼
+                    1ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                    2ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ðµï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¶ï¿½
+                    3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½Í±ï¿½
+                    4ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Â¼
                     INSERT INTO sys_user (id,name,password) VALUES(1111,'guet','guet1234');
                      */
                     String username = textField1.getText();
@@ -81,24 +81,24 @@ public class Login extends JFrame {
                     // ?sql?????????????
                     String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
                     System.out.println(sql);
-                    ResultSet rs = null;//½á¹û¼¯£ºÄÚ´æ£¬´æ´¢ÁË²éÑ¯µ½µÄÊý¾Ý£»ÄÚ´æÇøÓÐÒ»¸öÓÎ±ê£¬Ö´ÐÐÍê²éÑ¯µÄÊ±ºò£¬²»Ö¸ÏòÈÎºÎ¼ÇÂ¼
-                    Statement stmt = null;//Óï¾ä¶ÔÏó£¬ÈÝÒ×²úÉú×¢Èë¹¥»÷
+                    ResultSet rs = null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´æ£¬ï¿½æ´¢ï¿½Ë²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Î±ê£¬Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½Ê±ï¿½ò£¬²ï¿½Ö¸ï¿½ï¿½ï¿½ÎºÎ¼ï¿½Â¼
+                    Statement stmt = null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½×¢ï¿½ë¹¥ï¿½ï¿½
 
                     try {
                         conn = DriverManager.getConnection(url, user, dbPassword);
 
                         stmt = conn.createStatement();
                         rs = stmt.executeQuery(sql);
-                        if (rs.next()) {//ÈÃÓÎ±êÏòÏÂÒÆ¶¯Ò»´Î
+                        if (rs.next()) {//ï¿½ï¿½ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½Ò»ï¿½ï¿½
 
                             /*
-                            Éí·ÝÑ¡Ôñ¹¦ÄÜ
+                            ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½
                              */
                         if(radioButton1.isSelected()){
 
                             Main main=new Main();
                             main.setVisible(true);
-                            System.out.println("µÇÂ½³É¹¦");
+                            System.out.println("ï¿½ï¿½Â½ï¿½É¹ï¿½");
                             this.setVisible(false);
                         }
                         else if(radioButton2.isSelected()){
@@ -108,7 +108,7 @@ public class Login extends JFrame {
 
 
                         } else {
-                            System.out.println("ÓÃ»§Ãû»òÃÜÂë´íÎó");
+                            System.out.println("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
                         }
                     } catch (SQLException ex) {
                         ex.printStackTrace();
@@ -130,7 +130,7 @@ public class Login extends JFrame {
                     }
                 }
         );
-        button2.setText("×¢²á");
+        button2.setText("×¢ï¿½ï¿½");
         contentPane.add(button2);
         button2.setBounds(new Rectangle(new Point(230, 200), button1.getPreferredSize()));
 
@@ -141,7 +141,7 @@ public class Login extends JFrame {
         setLocationRelativeTo(getOwner());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.setVisible(true);//×é¼þÉèÖÃÎª¿É¼û
+        this.setVisible(true);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½É¼ï¿½
     }
 
     private JLabel label1;

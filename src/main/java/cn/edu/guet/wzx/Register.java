@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Thu Apr 28 22:38:18 CST 2022
  */
 
-package cn.wzx;
+package cn.edu.guet.wzx;
 
 import javax.swing.*;
 import java.awt.*;
@@ -69,7 +69,7 @@ public class Register extends JFrame {
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                       // System.out.println("测试");
+                       // System.out.println("娴嬭瘯");
                         String username = textField1.getText();
                         String Password = textField2.getText();
                         String phonenumber = textField2.getText();
@@ -79,7 +79,7 @@ public class Register extends JFrame {
                         String url = "jdbc:mysql://localhost:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
                         Connection conn = null;
-                        // 拼sql，容易有注入攻击
+                        // 鎷約ql锛屽鏄撴湁娉ㄥ叆鏀诲嚮
 
                         String check="SELECT * FROM sys_user WHERE name='"+username+"'";
 
@@ -95,13 +95,13 @@ public class Register extends JFrame {
                                 pstmt.setString(1,username);
                                 pstmt.setString(2,Password);
                                 pstmt.setString(3,phonenumber);
-                                pstmt.executeUpdate();//执行sql语句
+                                pstmt.executeUpdate();//鎵цsql璇彞
 
-                                System.out.println("注册成功");
+                                System.out.println("娉ㄥ唽鎴愬姛");
                                 Login login=new Login();
                                 login.setVisible(true);
                             }else {
-                                System.out.println("账号已存在或者账号不符合规则");
+                                System.out.println("璐﹀彿宸插瓨鍦ㄦ垨鑰呰处鍙蜂笉绗﹀悎瑙勫垯");
                             }
 
                         } catch (SQLException ex) {
@@ -118,7 +118,7 @@ public class Register extends JFrame {
         contentPane.add(button1);
         button1.setBounds(new Rectangle(new Point(180, 215), button1.getPreferredSize()));
 
-        //logo图片
+        //logo鍥剧墖
         ImageIcon image=new ImageIcon("E:\\Java\\images\\logo.jpg");
         label4 = new JLabel(image);
         label4.setBounds(new Rectangle(new Point(0, 200), label4.getPreferredSize()));
@@ -130,7 +130,7 @@ public class Register extends JFrame {
         setLocationRelativeTo(getOwner());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.setVisible(true);//设置组件可见
+        this.setVisible(true);//璁剧疆缁勪欢鍙
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 

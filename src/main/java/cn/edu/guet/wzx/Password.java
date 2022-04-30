@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Fri Apr 29 19:08:38 CST 2022
  */
 
-package cn.wzx;
+package cn.edu.guet.wzx;
 
 import javax.swing.*;
 import java.awt.*;

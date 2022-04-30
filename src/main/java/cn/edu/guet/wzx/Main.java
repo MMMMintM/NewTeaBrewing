@@ -1,4 +1,4 @@
-package cn.wzx;
+package cn.edu.guet.wzx;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -39,24 +39,24 @@ public class Main extends JFrame {
         label1.setFont(new
                 Font("STHeiti Light", Font.BOLD,
                 30));
-        label1.setText("ÉÌÆ·ÐÅÏ¢");
+        label1.setText("ï¿½ï¿½Æ·ï¿½ï¿½Ï¢");
         contentPane.add(label1);
         label1.setBounds(460, 0, 600, 60);
 
-        button1.setText("É¾³ý");
+        button1.setText("É¾ï¿½ï¿½");
         contentPane.add(button1);
         button1.setBounds(510, 355, 100, 30);
 
-        button2.setText("ÐÂÔö");
+        button2.setText("ï¿½ï¿½ï¿½ï¿½");
         contentPane.add(button2);
         button2.setBounds(610, 355, 100, 30);
 
-        button3.setText("ÐÞ¸Ä");
+        button3.setText("ï¿½Þ¸ï¿½");
         contentPane.add(button3);
         button3.setBounds(710, 355, 100, 30);
         button3.addActionListener(
                 (e)->{
-                    int rowNo = table1.getSelectedRow();//»ñÈ¡ËùÑ¡µÄÐÐºÅ
+                    int rowNo = table1.getSelectedRow();//ï¿½ï¿½È¡ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ðºï¿½
                     int id=(int)table1.getValueAt(rowNo, 0);
                     String title=(String)table1.getValueAt(rowNo, 1);
                     Float price=(Float)table1.getValueAt(rowNo, 2);
@@ -80,7 +80,7 @@ public class Main extends JFrame {
         contentPane.add(textField1);
         textField1.setBounds(270, 355, 130, 30);
 
-        button4.setText("²éÑ¯");
+        button4.setText("ï¿½ï¿½Ñ¯");
         contentPane.add(button4);
         button4.setBounds(410, 355, 100, 30);
 
@@ -144,7 +144,7 @@ public class Main extends JFrame {
             }
 
         }
-        // °Ñ¼¯ºÏµÄÊý¾Ý£¨ÉÌÆ·ÐÅÏ¢£©×ª»»³É¶þÎ¬Êý×é
+        // ï¿½Ñ¼ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½Æ·ï¿½ï¿½Ï¢ï¿½ï¿½×ªï¿½ï¿½ï¿½É¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
         data = new Object[list.size()][head.length];
 
         for (int i = 0; i < list.size(); i++) {
@@ -162,7 +162,7 @@ public class Main extends JFrame {
 
     private JScrollPane scrollPane1;
     private JTable table1;
-    private String head[] = {"id", "ÉÌÆ·Ãû³Æ", "µ¥¼Û", "ÃèÊö", "´ÙÏú¼Û", "ÉÌÆ·Í¼Æ¬"};
+    private String head[] = {"id", "ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½Æ·Í¼Æ¬"};
     private Object[][] data = null;
     private JButton button1;
     private JButton button2;
