@@ -4,7 +4,14 @@
 
 package cn.edu.guet.zt.statistics;
 
+import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
+import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
+import cn.edu.guet.hld.bean.MilkeTea;
+
 import java.awt.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Map;
 import javax.swing.*;
 
 /**
@@ -83,6 +90,108 @@ public class GUI extends JFrame {
         contentPane.add(button3);
         button3.setBounds(new Rectangle(new Point(65, 355), button3.getPreferredSize()));
 
+        button3.addActionListener(e -> {
+
+            MilkeTea milkeTea = new MilkeTea();
+            if (textField1.getText().equals("")&&textField2.getText().equals("")) {
+
+
+                //milkeTea.setId(id);
+                //milkeTea.setTitle(title);
+                ResultSet resultSet = null;
+                MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();
+
+                try {
+                    resultSet = milkeTeaServer.ServerSelect(milkeTea);
+                    while (resultSet.next()) {
+                        int id = resultSet.getInt(1);
+                        String title = resultSet.getString(2);
+                        float price = resultSet.getFloat(3);
+                        String description = resultSet.getString(4);
+                        int sales = resultSet.getInt(5);
+                        String img_url = resultSet.getString(6);
+                        System.out.println(id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (ClassNotFoundException classNotFoundException) {
+                    classNotFoundException.printStackTrace();
+                }
+            } else if(textField2.getText().equals("")){
+                int id=Integer.parseInt(textField1.getText());
+                milkeTea.setId(id);
+                MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();
+                ResultSet resultSet = null;
+                try {
+                    resultSet=milkeTeaServer.ServerSelect(milkeTea);
+                    //System.out.println(resultSet.next());
+                    while (resultSet.next()) {
+                        //int id = resultSet.getInt(1);
+                        String title=resultSet.getString(2);
+                        float price = resultSet.getFloat(3);
+                        String description = resultSet.getString(4);
+                        int sales = resultSet.getInt(5);
+                        String img_url = resultSet.getString(6);
+                        System.out.println(+id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (ClassNotFoundException classNotFoundException) {
+                    classNotFoundException.printStackTrace();
+                }
+
+
+            }else if(textField1.getText().equals("")){
+
+                String title=textField2.getText();
+
+                milkeTea.setTitle(title);
+                MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();
+                ResultSet resultSet = null;
+                try {
+                    resultSet=milkeTeaServer.ServerSelect(milkeTea);
+                    while (resultSet.next()) {
+                        int id = resultSet.getInt(1);
+                        //String title1=resultSet.getString(2);
+                        float price = resultSet.getFloat(3);
+                        String description = resultSet.getString(4);
+                        int sales = resultSet.getInt(5);
+                        String img_url = resultSet.getString(6);
+                        System.out.println(+id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (ClassNotFoundException classNotFoundException) {
+                    classNotFoundException.printStackTrace();
+                }
+            }else {
+                int id = Integer.parseInt(textField1.getText());
+                String title = textField2.getText();
+
+                milkeTea.setId(id);
+                milkeTea.setTitle(title);
+                ResultSet resultSet = null;
+                MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();
+                try {
+                    resultSet = milkeTeaServer.ServerSelect(milkeTea);
+                    while (resultSet.next()) {
+                        //int id=resultSet.getInt(1);
+                        //String title1=resultSet.getString(2);
+                        float price = resultSet.getFloat(3);
+                        String description = resultSet.getString(4);
+                        int sales = resultSet.getInt(5);
+                        String img_url = resultSet.getString(6);
+                        System.out.println(+id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (ClassNotFoundException classNotFoundException) {
+                    classNotFoundException.printStackTrace();
+                }
+            }
+
+        });
+
         //---- label5 ----
         label5.setText("\u603b\u9500\u552e\u989d\uff1a");
         contentPane.add(label5);
@@ -116,6 +225,9 @@ public class GUI extends JFrame {
     private JButton button3;
     private JLabel label5;
     private JButton button4;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
 
+    // JFormDesigner - End of variables declaration  //GEN-END:variables
+    public static void main(String[] args) {
+        new GUI();
+    }
 }

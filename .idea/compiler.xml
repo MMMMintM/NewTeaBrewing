@@ -9,6 +9,9 @@
         <module name="NewTeaBrewing" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="NewTeaBrewing" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
