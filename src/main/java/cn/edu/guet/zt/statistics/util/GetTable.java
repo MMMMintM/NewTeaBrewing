@@ -37,7 +37,7 @@ public class GetTable {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        }/*finally {
             try {
                 if(sql.equals("SELECT * FROM sales_volume")){
                     rs.close();
@@ -47,7 +47,7 @@ public class GetTable {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-        }
+        }*/
 
         data = new Object[list.size()][head.length];
 

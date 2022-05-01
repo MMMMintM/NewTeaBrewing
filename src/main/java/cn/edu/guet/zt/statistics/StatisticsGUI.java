@@ -8,6 +8,7 @@ import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
 import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
 import cn.edu.guet.hld.bean.MilkeTea;
 import cn.edu.guet.zt.statistics.util.GetTable;
+import cn.edu.guet.zt.statistics.util.GetTotalSales;
 import cn.edu.guet.zt.statistics.util.ResetTable;
 
 import java.awt.*;
@@ -74,7 +75,7 @@ public class StatisticsGUI extends JFrame {
         button1.setBounds(new Rectangle(new Point(40, 35), button1.getPreferredSize()));
         button1.addActionListener(
                 e->{
-                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[2],data,head),head));
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[1],data,head),head));
                 }
         );
 
@@ -127,7 +128,7 @@ public class StatisticsGUI extends JFrame {
 
 
         //---- label5 ----
-        label5.setText("总销售额");
+        label5.setText("总销售额：" + GetTotalSales.getSales());
         contentPane.add(label5);
         label5.setBounds(210, 430, 120, label5.getPreferredSize().height);
 
@@ -135,6 +136,11 @@ public class StatisticsGUI extends JFrame {
         button4.setText("刷新");
         contentPane.add(button4);
         button4.setBounds(new Rectangle(new Point(5, 450), button4.getPreferredSize()));
+        button4.addActionListener(
+                e -> {
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[0],data,head),head));
+                }
+        );
 
         contentPane.setPreferredSize(new Dimension(695, 520));
         pack();
