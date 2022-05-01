@@ -8,6 +8,7 @@ public class SalesVolume {
      * 销量表
      */
     private int id;
+    private String title;
     private int volume;
     private int total_sales;
 
@@ -17,6 +18,14 @@ public class SalesVolume {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getVolume() {
@@ -40,18 +49,19 @@ public class SalesVolume {
         if (this == o) return true;
         if (!(o instanceof SalesVolume)) return false;
         SalesVolume that = (SalesVolume) o;
-        return getId() == that.getId() && getVolume() == that.getVolume() && getTotal_sales() == that.getTotal_sales();
+        return getId() == that.getId() && getVolume() == that.getVolume() && getTotal_sales() == that.getTotal_sales() && Objects.equals(getTitle(), that.getTitle());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getVolume(), getTotal_sales());
+        return Objects.hash(getId(), getTitle(), getVolume(), getTotal_sales());
     }
 
     @Override
     public String toString() {
         return "SalesVolume{" +
                 "id=" + id +
+                ", title='" + title + '\'' +
                 ", volume=" + volume +
                 ", total_sales=" + total_sales +
                 '}';

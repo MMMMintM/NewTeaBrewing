@@ -7,9 +7,8 @@ package cn.edu.guet.zt.statistics;
 import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
 import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
 import cn.edu.guet.hld.bean.MilkeTea;
-import cn.edu.guet.zt.statistics.Service.SearchService;
-import cn.edu.guet.zt.statistics.Service.impl.SearchServiceImpl;
 import cn.edu.guet.zt.statistics.util.GetTable;
+import cn.edu.guet.zt.statistics.util.ResetTable;
 
 import java.awt.*;
 import java.sql.ResultSet;
@@ -75,12 +74,7 @@ public class StatisticsGUI extends JFrame {
         button1.setBounds(new Rectangle(new Point(40, 35), button1.getPreferredSize()));
         button1.addActionListener(
                 e->{
-                    DefaultTableModel tableModelV = new DefaultTableModel(GetTable.queryDate(sql[1],data,head),head){
-                        public boolean isCellEditable(int row,int colume){
-                            return false;
-                        }
-                    };
-                    table1.setModel(tableModelV);
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[2],data,head),head));
                 }
         );
 
@@ -90,12 +84,7 @@ public class StatisticsGUI extends JFrame {
         button2.setBounds(new Rectangle(new Point(40, 75), button2.getPreferredSize()));
         button2.addActionListener(
                 e->{
-                    DefaultTableModel tableModelV = new DefaultTableModel(GetTable.queryDate(sql[2],data,head),head){
-                        public boolean isCellEditable(int row,int colume){
-                            return false;
-                        }
-                    };
-                    table1.setModel(tableModelV);
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[2],data,head),head));
                 }
         );
 
@@ -127,8 +116,12 @@ public class StatisticsGUI extends JFrame {
                 e -> {
                     String ID = textField1.getText();
                     String name = textField2.getText();
-                    SearchService searchService = new SearchServiceImpl();
-                    searchService.newSearch(ID,name);
+                    String sql = "SELECT * FROM sales_volume WHERE INSTR(id,'" +
+                            ID +
+                            "')<>0 AND INSTR(title,'" +
+                            name +
+                            "') <> 0;";
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql,data,head),head));
                 }
         );
 
@@ -167,7 +160,7 @@ public class StatisticsGUI extends JFrame {
     private JLabel label5;
     private JButton button4;
     private Object[][] data = null;
-    private String head[] = {"商品ID","销售量","销售额"};
+    private String head[] = {"商品ID","商品名称","销售量","销售额"};
     private String sql[] = {
             "SELECT * FROM sales_volume",
             "SELECT * FROM sales_volume ORDER BY volume DESC",
