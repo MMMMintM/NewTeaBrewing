@@ -7,6 +7,8 @@ package cn.edu.guet.zt.statistics;
 import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
 import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
 import cn.edu.guet.hld.bean.MilkeTea;
+import cn.edu.guet.zt.statistics.Service.SearchService;
+import cn.edu.guet.zt.statistics.Service.impl.SearchServiceImpl;
 import cn.edu.guet.zt.statistics.util.GetTable;
 
 import java.awt.*;
@@ -63,7 +65,7 @@ public class StatisticsGUI extends JFrame {
         scrollPane1.setBounds(210, 30, 480, 375);
 
         //---- label1 ----
-        label1.setText("\u6392\u5e8f\u65b9\u5f0f");
+        label1.setText("排序方式");
         contentPane.add(label1);
         label1.setBounds(new Rectangle(new Point(10, 10), label1.getPreferredSize()));
 
@@ -98,17 +100,17 @@ public class StatisticsGUI extends JFrame {
         );
 
         //---- label2 ----
-        label2.setText("\u7d22\u5f15");
+        label2.setText("索引");
         contentPane.add(label2);
         label2.setBounds(new Rectangle(new Point(10, 220), label2.getPreferredSize()));
 
         //---- label3 ----
-        label3.setText("\u5546\u54c1ID\uff1a");
+        label3.setText("商品ID：");
         contentPane.add(label3);
         label3.setBounds(new Rectangle(new Point(20, 255), label3.getPreferredSize()));
 
         //---- label4 ----
-        label4.setText("\u5546\u54c1\u540d\u79f0\uff1a");
+        label4.setText("商品名称");
         contentPane.add(label4);
         label4.setBounds(new Rectangle(new Point(20, 295), label4.getPreferredSize()));
 
@@ -121,10 +123,18 @@ public class StatisticsGUI extends JFrame {
         button3.setText("查询");
         contentPane.add(button3);
         button3.setBounds(new Rectangle(new Point(65, 355), button3.getPreferredSize()));
+        button3.addActionListener(
+                e -> {
+                    String ID = textField1.getText();
+                    String name = textField2.getText();
+                    SearchService searchService = new SearchServiceImpl();
+                    searchService.newSearch(ID,name);
+                }
+        );
 
 
         //---- label5 ----
-        label5.setText("\u603b\u9500\u552e\u989d\uff1a");
+        label5.setText("总销售额");
         contentPane.add(label5);
         label5.setBounds(210, 430, 120, label5.getPreferredSize().height);
 
@@ -157,7 +167,7 @@ public class StatisticsGUI extends JFrame {
     private JLabel label5;
     private JButton button4;
     private Object[][] data = null;
-    private String head[] = {"商品ID","总销售量","总销售额"};
+    private String head[] = {"商品ID","销售量","销售额"};
     private String sql[] = {
             "SELECT * FROM sales_volume",
             "SELECT * FROM sales_volume ORDER BY volume DESC",
