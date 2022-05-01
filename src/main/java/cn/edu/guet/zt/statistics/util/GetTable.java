@@ -30,8 +30,9 @@ public class GetTable {
             while(rs.next()){
                 SalesVolume sv = new SalesVolume();
                 sv.setId(rs.getInt(1));
-                sv.setVolume(rs.getInt(2));
-                sv.setTotal_sales(rs.getInt(3));
+                sv.setTitle(rs.getString(2));
+                sv.setVolume(rs.getInt(3));
+                sv.setTotal_sales(rs.getInt(4));
                 list.add(sv);
             }
         } catch (SQLException e) {
@@ -54,8 +55,9 @@ public class GetTable {
             for(int j = 0;j < head.length;j ++)
             {
                 data[i][0] = list.get(i).getId();
-                data[i][1] = list.get(i).getVolume();
-                data[i][2] = list.get(i).getTotal_sales();
+                data[i][1] = list.get(i).getTitle();
+                data[i][2] = list.get(i).getVolume();
+                data[i][3] = list.get(i).getTotal_sales();
 
             }
 
