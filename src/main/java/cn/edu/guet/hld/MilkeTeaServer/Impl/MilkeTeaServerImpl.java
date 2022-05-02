@@ -16,7 +16,7 @@ public class MilkeTeaServerImpl implements MilkeTeaServer {
         ResultSet resultSet = null;
         MilkeTeaDao milkeTeaDao = new MilkeTeaImpl();
 
-        if (milkeTea.getTitle()==null && String.valueOf(milkeTea.getId())==null) {
+        if (milkeTea.getTitle() == null && String.valueOf(milkeTea.getId()) == null) {
             resultSet = milkeTeaDao.Select();
         } else {
             resultSet = milkeTeaDao.Select(milkeTea);
@@ -45,7 +45,7 @@ public class MilkeTeaServerImpl implements MilkeTeaServer {
     }
 
     @Override
-    public String ServerUpdate(MilkeTea milkeTea,String name) throws SQLException, ClassNotFoundException {
+    public String ServerUpdate(MilkeTea milkeTea, String name) throws SQLException, ClassNotFoundException {
 
 
         String results = null;

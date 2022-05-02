@@ -297,7 +297,7 @@ public class SelectInterface extends JFrame {
             panel1.add(button2);
             button2.setBounds(65, 300, 100, 50);
             button2.addActionListener(e -> {
-                Insert insert=new Insert();
+                Insert insert = new Insert();
                 //insert.initComponents();
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -307,8 +307,8 @@ public class SelectInterface extends JFrame {
             button3.setText("\u5220\u9664");
             panel1.add(button3);
             button3.setBounds(65, 385, 100, 50);
-            button3.addActionListener(e ->{
-                Delete delete=new Delete();
+            button3.addActionListener(e -> {
+                Delete delete = new Delete();
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             });
 
@@ -316,8 +316,8 @@ public class SelectInterface extends JFrame {
             button4.setText("\u4fee\u6539");
             panel1.add(button4);
             button4.setBounds(65, 480, 100, 50);
-            button4.addActionListener( e ->{
-                Undate undate=new Undate();
+            button4.addActionListener(e -> {
+                Undate undate = new Undate();
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             });
 

@@ -47,10 +47,10 @@ public class Delete extends JFrame {
         button1.setText("\u5220\u9664");
         contentPane.add(button1);
         button1.setBounds(140, 180, 90, 40);
-        button1.addActionListener(e->{
-            String title=textField1.getText();
-            MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();
-            MilkeTea milkeTea=new MilkeTea();
+        button1.addActionListener(e -> {
+            String title = textField1.getText();
+            MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();
+            MilkeTea milkeTea = new MilkeTea();
             milkeTea.setTitle(title);
             try {
                 milkeTeaServer.ServerDelete(milkeTea);

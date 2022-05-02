@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="" />
+    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="hdl">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/MilkeTeaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/MilkeTeaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/Impl/MilkeTeaServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/Impl/MilkeTeaServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/MilkeTeaServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/MilkeTeaServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/bean/MilkeTea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/bean/MilkeTea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/ConnectionHander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/ConnectionHander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Insert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Picture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Undate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Undate.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +33,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/hld" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -175,13 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651472020689</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="hdl">
+      <created>1651474492886</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651474492886</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="感觉写得差不多了" />
     <MESSAGE value="hdl" />
     <option name="LAST_COMMIT_MESSAGE" value="hdl" />
   </component>

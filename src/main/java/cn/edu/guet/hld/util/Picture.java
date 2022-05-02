@@ -17,7 +17,7 @@ import javax.swing.*;
  */
 public class Picture extends JFrame {
 
-    public Picture(String url){
+    public Picture(String url) {
         initComponents(url);
     }
 
@@ -28,17 +28,17 @@ public class Picture extends JFrame {
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
-        BufferedInputStream bis=null;
+        BufferedInputStream bis = null;
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());
-        ByteArrayOutputStream baos=null;
+        ByteArrayOutputStream baos = null;
         try {
-            URL url1=new URL(url);
-            bis=new BufferedInputStream(url1.openStream());
-            baos=new ByteArrayOutputStream();
-            int i=0;
-            while ((i=bis.read())!=-1){
+            URL url1 = new URL(url);
+            bis = new BufferedInputStream(url1.openStream());
+            baos = new ByteArrayOutputStream();
+            int i = 0;
+            while ((i = bis.read()) != -1) {
                 baos.write(i);
             }
 
@@ -47,7 +47,7 @@ public class Picture extends JFrame {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 bis.close();
             } catch (IOException e) {
@@ -56,12 +56,11 @@ public class Picture extends JFrame {
         }
 
 
-        JLabel path_q=new JLabel(new ImageIcon(baos.toByteArray()));
-        path_q.setBounds(100,50,200,200);
-        this.add(path_q,new byte[1024]);
+        JLabel path_q = new JLabel(new ImageIcon(baos.toByteArray()));
+        path_q.setBounds(100, 50, 200, 200);
+        this.add(path_q, new byte[1024]);
         this.setVisible(true);
         this.setResizable(false);
-
 
 
         // JFormDesigner - End of component initialization  //GEN-END:initComponents

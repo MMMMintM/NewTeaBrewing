@@ -120,6 +120,6 @@ public class MilkeTeaImpl implements MilkeTeaDao {
         GetCommit getCommit=new GetCommit();
 
 
-        return count > 0 ? "更新成功" : "更新失败";
+        return count > 0 ? "更新成功 " : "更新失败";
     }
 }

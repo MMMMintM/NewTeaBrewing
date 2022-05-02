@@ -34,10 +34,10 @@ public class GetCommit extends JFrame {
         //---- button1 ----
         button1.setText("Yes");
         button1.addActionListener(e -> {
-            ConnectionHander connectionHander=new ConnectionHander();
+            ConnectionHander connectionHander = new ConnectionHander();
             try {
                 connectionHander.getConnection().commit();
-                Succeed succeed=new Succeed();
+                Succeed succeed = new Succeed();
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 this.setVisible(false);
             } catch (SQLException throwables) {
@@ -50,8 +50,8 @@ public class GetCommit extends JFrame {
         //---- button2 ----
         button2.setText(" No ");
         button2.addActionListener(e -> {
-            ConnectionHander connectionHander=new ConnectionHander();
-            Succeed succeed=new Succeed();
+            ConnectionHander connectionHander = new ConnectionHander();
+            Succeed succeed = new Succeed();
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             this.setVisible(false);
             try {
@@ -76,8 +76,9 @@ public class GetCommit extends JFrame {
     private JLabel label1;
     private JButton button1;
     private JButton button2;
+
     // JFormDesigner - End of variables declaration  //GEN-END:variables
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new GetCommit();
     }
 }

@@ -83,34 +83,34 @@ public class Insert extends JFrame {
         button1.setText("\u6dfb\u52a0");
         contentPane.add(button1);
         button1.setBounds(230, 375, 105, 50);
-        button1.addActionListener(e ->{
+        button1.addActionListener(e -> {
             int id;
             float price;
-            if(textField1.getText().equals("")){
+            if (textField1.getText().equals("")) {
                 textField1.setText("0");
-                id=Integer.parseInt(textField1.getText());
-            }else{
-                id=Integer.parseInt(textField1.getText());
+                id = Integer.parseInt(textField1.getText());
+            } else {
+                id = Integer.parseInt(textField1.getText());
             }
 
-            String title=textField2.getText();
-            if(textField3.getText().equals("")){
+            String title = textField2.getText();
+            if (textField3.getText().equals("")) {
                 textField3.setText("0.00");
-                price=Float.valueOf(textField3.getText());
-            }else {
-                price=Float.valueOf(textField3.getText());
+                price = Float.valueOf(textField3.getText());
+            } else {
+                price = Float.valueOf(textField3.getText());
             }
-            String description=textField4.getText();
-            String img_url=textField5.getText();
+            String description = textField4.getText();
+            String img_url = textField5.getText();
 
-            MilkeTea milkeTea=new MilkeTea();
+            MilkeTea milkeTea = new MilkeTea();
             milkeTea.setId(id);
             milkeTea.setTitle(title);
             milkeTea.setPrice(price);
             milkeTea.setDescription(description);
             milkeTea.setImg_url(img_url);
 
-            MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();
+            MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();
 
             try {
                 milkeTeaServer.ServerInsert(milkeTea);
@@ -145,8 +145,9 @@ public class Insert extends JFrame {
     private JLabel label6;
     private JTextField textField5;
     private JButton button1;
+
     // JFormDesigner - End of variables declaration  //GEN-END:variables
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new Insert();
     }
 }
