@@ -1,4 +1,4 @@
-package cn.edu.guet.zt.statistics.bin;
+package cn.edu.guet.zt.statistics.bean;
 
 import java.util.Objects;
 
