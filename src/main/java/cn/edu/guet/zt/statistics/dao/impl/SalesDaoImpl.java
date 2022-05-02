@@ -71,7 +71,7 @@ public class SalesDaoImpl implements SalesDao {
             conn  = ConnectionHander.getConnection();
 
             String sql = "UPDATE item SET id = ?,title = ? WHERE name = ?;";
-            String foreignKeySql = "SET foreign_key_checks = 0;";
+            String foreignKeySql = "SET foreign_key_checks = 1;";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
             PreparedStatement fpstmt = conn.prepareStatement(foreignKeySql);
