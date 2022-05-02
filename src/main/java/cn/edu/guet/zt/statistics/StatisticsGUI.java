@@ -168,9 +168,9 @@ public class StatisticsGUI extends JFrame {
     private Object[][] data = null;
     private String head[] = {"商品ID","商品名称","销售量","销售额"};
     private String sql[] = {
-            "SELECT * FROM sales_volume",
-            "SELECT * FROM sales_volume ORDER BY volume DESC",
-            "SELECT * FROM sales_volume ORDER BY total_sales DESC"
+            "SELECT * FROM sales_volume;",
+            "SELECT * FROM sales_volume ORDER BY volume DESC;",
+            "SELECT * FROM sales_volume ORDER BY total_sales DESC;"
     };
 
     // JFormDesigner - End of variables declaration  //GEN-END:variables

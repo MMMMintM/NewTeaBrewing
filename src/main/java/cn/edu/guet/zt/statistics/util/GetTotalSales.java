@@ -1,7 +1,5 @@
 package cn.edu.guet.zt.statistics.util;
 
-import cn.edu.guet.zt.statistics.bin.SalesVolume;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

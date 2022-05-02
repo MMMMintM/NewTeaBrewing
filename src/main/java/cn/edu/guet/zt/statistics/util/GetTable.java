@@ -1,6 +1,6 @@
 package cn.edu.guet.zt.statistics.util;
 
-import cn.edu.guet.zt.statistics.bin.SalesVolume;
+import cn.edu.guet.zt.statistics.bean.SalesVolume;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
