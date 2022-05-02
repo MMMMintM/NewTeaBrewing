@@ -70,18 +70,20 @@ public class SalesDaoImpl implements SalesDao {
         try {
             conn  = ConnectionHander.getConnection();
 
-            String foreignKeySql = "SET foreign_key_checks = 0;";
             String sql = "UPDATE item SET id = ?,title = ? WHERE name = ?;";
+            String foreignKeySql = "SET foreign_key_checks = 0;";
 
-            PreparedStatement fpstmt = conn.prepareStatement(foreignKeySql);
             PreparedStatement pstmt = conn.prepareStatement(sql);
+            PreparedStatement fpstmt = conn.prepareStatement(foreignKeySql);
 
             pstmt.setInt(1,milkeTea.getId());
             pstmt.setString(2,milkeTea.getTitle());
             pstmt.setString(3,name);
 
-            fpstmt.executeUpdate();
+
             pstmt.executeUpdate();
+            fpstmt.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
             throw new SQLException();
