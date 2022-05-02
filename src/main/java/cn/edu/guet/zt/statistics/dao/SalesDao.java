@@ -8,7 +8,6 @@ import java.sql.SQLException;
 public interface SalesDao {
     /**
      * 此接口提供表sales_volume的分别因表item及表order_info变动而变动的增加，删除和修改方法
-     * 随便改点东西试试
      */
     void insertSales(MilkeTea milkeTea) throws SQLException;
 
