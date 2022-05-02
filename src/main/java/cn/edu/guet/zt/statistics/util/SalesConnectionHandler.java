@@ -23,7 +23,6 @@ public class SalesConnectionHandler {
             conn = DriverManager.getConnection(url, user, dbPassword);
             threadLocal.set(conn);
         }
-        System.out.println("getConn");
         return conn;
     }
 

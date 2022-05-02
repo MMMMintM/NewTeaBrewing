@@ -1,5 +1,6 @@
 package cn.edu.guet.zt.statistics.bean;
 
+import java.sql.Time;
 import java.util.Objects;
 
 public class SalesVolume {
@@ -11,6 +12,7 @@ public class SalesVolume {
     private String title;
     private int volume;
     private int total_sales;
+    private Time update_time;
 
     public int getId() {
         return id;
@@ -44,17 +46,25 @@ public class SalesVolume {
         this.total_sales = total_sales;
     }
 
+    public Time getUpdate_time() {
+        return update_time;
+    }
+
+    public void setUpdate_time(Time update_time) {
+        this.update_time = update_time;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof SalesVolume)) return false;
         SalesVolume that = (SalesVolume) o;
-        return getId() == that.getId() && getVolume() == that.getVolume() && getTotal_sales() == that.getTotal_sales() && Objects.equals(getTitle(), that.getTitle());
+        return getId() == that.getId() && getVolume() == that.getVolume() && getTotal_sales() == that.getTotal_sales() && Objects.equals(getTitle(), that.getTitle()) && Objects.equals(getUpdate_time(), that.getUpdate_time());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getVolume(), getTotal_sales());
+        return Objects.hash(getId(), getTitle(), getVolume(), getTotal_sales(), getUpdate_time());
     }
 
     @Override
@@ -64,6 +74,7 @@ public class SalesVolume {
                 ", title='" + title + '\'' +
                 ", volume=" + volume +
                 ", total_sales=" + total_sales +
+                ", update_time=" + update_time +
                 '}';
     }
 }
