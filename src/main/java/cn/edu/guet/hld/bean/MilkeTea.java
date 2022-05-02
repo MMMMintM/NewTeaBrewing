@@ -23,7 +23,7 @@ public class MilkeTea {
     }
 
     public void setTitle(String title) {
-        this.title =title;
+        this.title = title;
     }
 
     public float getPrice() {

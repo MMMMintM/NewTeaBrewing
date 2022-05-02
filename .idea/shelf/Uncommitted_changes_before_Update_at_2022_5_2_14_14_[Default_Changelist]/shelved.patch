@@ -1,0 +1,128 @@
+Index: src/main/java/cn/edu/guet/zt/statistics/GUI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\r\n * Created by JFormDesigner on Fri Apr 29 19:52:01 CST 2022\r\n */\r\n\r\npackage cn.edu.guet.zt.statistics;\r\n\r\nimport cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;\r\nimport cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;\r\nimport cn.edu.guet.hld.bean.MilkeTea;\r\n\r\nimport java.awt.*;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport java.util.Map;\r\nimport javax.swing.*;\r\n\r\n/**\r\n * 销量统计\r\n * 此类用于显示销量统计界面\r\n */\r\npublic class GUI extends JFrame {\r\n    public GUI() {\r\n        initComponents();\r\n    }\r\n\r\n    private void initComponents() {\r\n        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents\r\n        scrollPane1 = new JScrollPane();\r\n        table1 = new JTable();\r\n        label1 = new JLabel();\r\n        button1 = new JButton();\r\n        button2 = new JButton();\r\n        label2 = new JLabel();\r\n        label3 = new JLabel();\r\n        label4 = new JLabel();\r\n        textField1 = new JTextField();\r\n        textField2 = new JTextField();\r\n        button3 = new JButton();\r\n        label5 = new JLabel();\r\n        button4 = new JButton();\r\n\r\n        //======== this ========\r\n        var contentPane = getContentPane();\r\n        contentPane.setLayout(null);\r\n\r\n        //======== scrollPane1 ========\r\n        {\r\n            scrollPane1.setViewportView(table1);\r\n        }\r\n        contentPane.add(scrollPane1);\r\n        scrollPane1.setBounds(210, 30, 480, 375);\r\n\r\n        //---- label1 ----\r\n        label1.setText(\"\\u6392\\u5e8f\\u65b9\\u5f0f\");\r\n        contentPane.add(label1);\r\n        label1.setBounds(new Rectangle(new Point(10, 10), label1.getPreferredSize()));\r\n\r\n        //---- button1 ----\r\n        button1.setText(\"\\u9500\\u552e\\u91cf\");\r\n        contentPane.add(button1);\r\n        button1.setBounds(new Rectangle(new Point(40, 35), button1.getPreferredSize()));\r\n\r\n        //---- button2 ----\r\n        button2.setText(\"\\u9500\\u552e\\u989d\");\r\n        contentPane.add(button2);\r\n        button2.setBounds(new Rectangle(new Point(40, 75), button2.getPreferredSize()));\r\n\r\n        //---- label2 ----\r\n        label2.setText(\"\\u7d22\\u5f15\");\r\n        contentPane.add(label2);\r\n        label2.setBounds(new Rectangle(new Point(10, 220), label2.getPreferredSize()));\r\n\r\n        //---- label3 ----\r\n        label3.setText(\"\\u5546\\u54c1ID\\uff1a\");\r\n        contentPane.add(label3);\r\n        label3.setBounds(new Rectangle(new Point(20, 255), label3.getPreferredSize()));\r\n\r\n        //---- label4 ----\r\n        label4.setText(\"\\u5546\\u54c1\\u540d\\u79f0\\uff1a\");\r\n        contentPane.add(label4);\r\n        label4.setBounds(new Rectangle(new Point(20, 295), label4.getPreferredSize()));\r\n\r\n        contentPane.add(textField1);\r\n        textField1.setBounds(85, 255, 105, textField1.getPreferredSize().height);\r\n        contentPane.add(textField2);\r\n        textField2.setBounds(85, 295, 105, textField2.getPreferredSize().height);\r\n\r\n        //---- button3 ----\r\n        button3.setText(\"查询\");\r\n        contentPane.add(button3);\r\n        button3.setBounds(new Rectangle(new Point(65, 355), button3.getPreferredSize()));\r\n\r\n        button3.addActionListener(e -> {\r\n\r\n            MilkeTea milkeTea = new MilkeTea();\r\n            if (textField1.getText().equals(\"\")&&textField2.getText().equals(\"\")) {\r\n\r\n\r\n                //milkeTea.setId(id);\r\n                //milkeTea.setTitle(title);\r\n                ResultSet resultSet = null;\r\n                MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();\r\n\r\n                try {\r\n                    resultSet = milkeTeaServer.ServerSelect(milkeTea);\r\n                    while (resultSet.next()) {\r\n                        int id = resultSet.getInt(1);\r\n                        String title = resultSet.getString(2);\r\n                        float price = resultSet.getFloat(3);\r\n                        String description = resultSet.getString(4);\r\n                        int sales = resultSet.getInt(5);\r\n                        String img_url = resultSet.getString(6);\r\n                        System.out.println(id + \"\\t\" + title + \"\\t\" + price + \"\\t\" + description + \"\\t\" + sales + \"\\t\" + img_url);\r\n                    }\r\n                } catch (SQLException throwables) {\r\n                    throwables.printStackTrace();\r\n                } catch (ClassNotFoundException classNotFoundException) {\r\n                    classNotFoundException.printStackTrace();\r\n                }\r\n            } else if(textField2.getText().equals(\"\")){\r\n                int id=Integer.parseInt(textField1.getText());\r\n                milkeTea.setId(id);\r\n                MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();\r\n                ResultSet resultSet = null;\r\n                try {\r\n                    resultSet=milkeTeaServer.ServerSelect(milkeTea);\r\n                    //System.out.println(resultSet.next());\r\n                    while (resultSet.next()) {\r\n                        //int id = resultSet.getInt(1);\r\n                        String title=resultSet.getString(2);\r\n                        float price = resultSet.getFloat(3);\r\n                        String description = resultSet.getString(4);\r\n                        int sales = resultSet.getInt(5);\r\n                        String img_url = resultSet.getString(6);\r\n                        System.out.println(+id + \"\\t\" + title + \"\\t\" + price + \"\\t\" + description + \"\\t\" + sales + \"\\t\" + img_url);\r\n                    }\r\n                } catch (SQLException throwables) {\r\n                    throwables.printStackTrace();\r\n                } catch (ClassNotFoundException classNotFoundException) {\r\n                    classNotFoundException.printStackTrace();\r\n                }\r\n\r\n\r\n            }else if(textField1.getText().equals(\"\")){\r\n\r\n                String title=textField2.getText();\r\n\r\n                milkeTea.setTitle(title);\r\n                MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();\r\n                ResultSet resultSet = null;\r\n                try {\r\n                    resultSet=milkeTeaServer.ServerSelect(milkeTea);\r\n                    while (resultSet.next()) {\r\n                        int id = resultSet.getInt(1);\r\n                        //String title1=resultSet.getString(2);\r\n                        float price = resultSet.getFloat(3);\r\n                        String description = resultSet.getString(4);\r\n                        int sales = resultSet.getInt(5);\r\n                        String img_url = resultSet.getString(6);\r\n                        System.out.println(+id + \"\\t\" + title + \"\\t\" + price + \"\\t\" + description + \"\\t\" + sales + \"\\t\" + img_url);\r\n                    }\r\n                } catch (SQLException throwables) {\r\n                    throwables.printStackTrace();\r\n                } catch (ClassNotFoundException classNotFoundException) {\r\n                    classNotFoundException.printStackTrace();\r\n                }\r\n            }else {\r\n                int id = Integer.parseInt(textField1.getText());\r\n                String title = textField2.getText();\r\n\r\n                milkeTea.setId(id);\r\n                milkeTea.setTitle(title);\r\n                ResultSet resultSet = null;\r\n                MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();\r\n                try {\r\n                    resultSet = milkeTeaServer.ServerSelect(milkeTea);\r\n                    while (resultSet.next()) {\r\n                        //int id=resultSet.getInt(1);\r\n                        //String title1=resultSet.getString(2);\r\n                        float price = resultSet.getFloat(3);\r\n                        String description = resultSet.getString(4);\r\n                        int sales = resultSet.getInt(5);\r\n                        String img_url = resultSet.getString(6);\r\n                        System.out.println(+id + \"\\t\" + title + \"\\t\" + price + \"\\t\" + description + \"\\t\" + sales + \"\\t\" + img_url);\r\n                    }\r\n                } catch (SQLException throwables) {\r\n                    throwables.printStackTrace();\r\n                } catch (ClassNotFoundException classNotFoundException) {\r\n                    classNotFoundException.printStackTrace();\r\n                }\r\n            }\r\n\r\n        });\r\n\r\n        //---- label5 ----\r\n        label5.setText(\"\\u603b\\u9500\\u552e\\u989d\\uff1a\");\r\n        contentPane.add(label5);\r\n        label5.setBounds(210, 430, 120, label5.getPreferredSize().height);\r\n\r\n        //---- button4 ----\r\n        button4.setText(\"刷新\");\r\n        contentPane.add(button4);\r\n        button4.setBounds(new Rectangle(new Point(5, 450), button4.getPreferredSize()));\r\n\r\n        contentPane.setPreferredSize(new Dimension(695, 520));\r\n        pack();\r\n        setLocationRelativeTo(getOwner());\r\n        // JFormDesigner - End of component initialization  //GEN-END:initComponents\r\n        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        this.setResizable(false);\r\n        this.setVisible(true);\r\n    }\r\n\r\n    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables\r\n    private JScrollPane scrollPane1;\r\n    private JTable table1;\r\n    private JLabel label1;\r\n    private JButton button1;\r\n    private JButton button2;\r\n    private JLabel label2;\r\n    private JLabel label3;\r\n    private JLabel label4;\r\n    private JTextField textField1;\r\n    private JTextField textField2;\r\n    private JButton button3;\r\n    private JLabel label5;\r\n    private JButton button4;\r\n\r\n    // JFormDesigner - End of variables declaration  //GEN-END:variables\r\n    public static void main(String[] args) {\r\n        new GUI();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/cn/edu/guet/zt/statistics/GUI.java b/src/main/java/cn/edu/guet/zt/statistics/GUI.java
+--- a/src/main/java/cn/edu/guet/zt/statistics/GUI.java	(revision 056fc0a4ebf75f3c04544f23196cb436e08589f4)
++++ b/src/main/java/cn/edu/guet/zt/statistics/GUI.java	(date 1651417965861)
+@@ -90,108 +90,6 @@
+         contentPane.add(button3);
+         button3.setBounds(new Rectangle(new Point(65, 355), button3.getPreferredSize()));
+ 
+-        button3.addActionListener(e -> {
+-
+-            MilkeTea milkeTea = new MilkeTea();
+-            if (textField1.getText().equals("")&&textField2.getText().equals("")) {
+-
+-
+-                //milkeTea.setId(id);
+-                //milkeTea.setTitle(title);
+-                ResultSet resultSet = null;
+-                MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();
+-
+-                try {
+-                    resultSet = milkeTeaServer.ServerSelect(milkeTea);
+-                    while (resultSet.next()) {
+-                        int id = resultSet.getInt(1);
+-                        String title = resultSet.getString(2);
+-                        float price = resultSet.getFloat(3);
+-                        String description = resultSet.getString(4);
+-                        int sales = resultSet.getInt(5);
+-                        String img_url = resultSet.getString(6);
+-                        System.out.println(id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+-                    }
+-                } catch (SQLException throwables) {
+-                    throwables.printStackTrace();
+-                } catch (ClassNotFoundException classNotFoundException) {
+-                    classNotFoundException.printStackTrace();
+-                }
+-            } else if(textField2.getText().equals("")){
+-                int id=Integer.parseInt(textField1.getText());
+-                milkeTea.setId(id);
+-                MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();
+-                ResultSet resultSet = null;
+-                try {
+-                    resultSet=milkeTeaServer.ServerSelect(milkeTea);
+-                    //System.out.println(resultSet.next());
+-                    while (resultSet.next()) {
+-                        //int id = resultSet.getInt(1);
+-                        String title=resultSet.getString(2);
+-                        float price = resultSet.getFloat(3);
+-                        String description = resultSet.getString(4);
+-                        int sales = resultSet.getInt(5);
+-                        String img_url = resultSet.getString(6);
+-                        System.out.println(+id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+-                    }
+-                } catch (SQLException throwables) {
+-                    throwables.printStackTrace();
+-                } catch (ClassNotFoundException classNotFoundException) {
+-                    classNotFoundException.printStackTrace();
+-                }
+-
+-
+-            }else if(textField1.getText().equals("")){
+-
+-                String title=textField2.getText();
+-
+-                milkeTea.setTitle(title);
+-                MilkeTeaServer milkeTeaServer=new MilkeTeaServerImpl();
+-                ResultSet resultSet = null;
+-                try {
+-                    resultSet=milkeTeaServer.ServerSelect(milkeTea);
+-                    while (resultSet.next()) {
+-                        int id = resultSet.getInt(1);
+-                        //String title1=resultSet.getString(2);
+-                        float price = resultSet.getFloat(3);
+-                        String description = resultSet.getString(4);
+-                        int sales = resultSet.getInt(5);
+-                        String img_url = resultSet.getString(6);
+-                        System.out.println(+id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+-                    }
+-                } catch (SQLException throwables) {
+-                    throwables.printStackTrace();
+-                } catch (ClassNotFoundException classNotFoundException) {
+-                    classNotFoundException.printStackTrace();
+-                }
+-            }else {
+-                int id = Integer.parseInt(textField1.getText());
+-                String title = textField2.getText();
+-
+-                milkeTea.setId(id);
+-                milkeTea.setTitle(title);
+-                ResultSet resultSet = null;
+-                MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();
+-                try {
+-                    resultSet = milkeTeaServer.ServerSelect(milkeTea);
+-                    while (resultSet.next()) {
+-                        //int id=resultSet.getInt(1);
+-                        //String title1=resultSet.getString(2);
+-                        float price = resultSet.getFloat(3);
+-                        String description = resultSet.getString(4);
+-                        int sales = resultSet.getInt(5);
+-                        String img_url = resultSet.getString(6);
+-                        System.out.println(+id + "\t" + title + "\t" + price + "\t" + description + "\t" + sales + "\t" + img_url);
+-                    }
+-                } catch (SQLException throwables) {
+-                    throwables.printStackTrace();
+-                } catch (ClassNotFoundException classNotFoundException) {
+-                    classNotFoundException.printStackTrace();
+-                }
+-            }
+-
+-        });
+-
+         //---- label5 ----
+         label5.setText("\u603b\u9500\u552e\u989d\uff1a");
+         contentPane.add(label5);
+@@ -227,7 +125,5 @@
+     private JButton button4;
+ 
+     // JFormDesigner - End of variables declaration  //GEN-END:variables
+-    public static void main(String[] args) {
+-        new GUI();
+-    }
++
+ }
