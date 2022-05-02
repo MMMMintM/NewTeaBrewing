@@ -33,6 +33,7 @@ public class GetTable {
                 sv.setTitle(rs.getString(2));
                 sv.setVolume(rs.getInt(3));
                 sv.setTotal_sales(rs.getInt(4));
+                sv.setUpdate_time(rs.getTime(5));
                 list.add(sv);
             }
         } catch (SQLException e) {
@@ -58,6 +59,7 @@ public class GetTable {
                 data[i][1] = list.get(i).getTitle();
                 data[i][2] = list.get(i).getVolume();
                 data[i][3] = list.get(i).getTotal_sales();
+                data[i][4] = list.get(i).getUpdate_time();
 
             }
 

@@ -7,9 +7,7 @@ package cn.edu.guet.zt.statistics;
 import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
 import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
 import cn.edu.guet.hld.bean.MilkeTea;
-import cn.edu.guet.zt.statistics.util.GetTable;
-import cn.edu.guet.zt.statistics.util.GetTotalSales;
-import cn.edu.guet.zt.statistics.util.ResetTable;
+import cn.edu.guet.zt.statistics.util.*;
 
 import java.awt.*;
 import java.sql.ResultSet;
@@ -41,6 +39,8 @@ public class StatisticsGUI extends JFrame {
         textField2 = new JTextField();
         button3 = new JButton();
         label5 = new JLabel();
+        label6 = new JLabel();
+        label7 = new JLabel();
         button4 = new JButton();
 
         GetTable getTable = new GetTable();
@@ -130,7 +130,17 @@ public class StatisticsGUI extends JFrame {
         //---- label5 ----
         label5.setText("总销售额：" + GetTotalSales.getSales());
         contentPane.add(label5);
-        label5.setBounds(210, 430, 120, label5.getPreferredSize().height);
+        label5.setBounds(600, 430, 120, label5.getPreferredSize().height);
+
+        //---- label6 ----
+        label6.setText("当日销售额：" + GetDailySales.getSales());
+        contentPane.add(label6);
+        label6.setBounds(210, 430, 120, label6.getPreferredSize().height);
+
+        //---- label7 ----
+        label7.setText("当月销售额：" + GetMonthlySales.getSales());
+        contentPane.add(label7);
+        label7.setBounds(395, 430, 120, label7.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText("刷新");
@@ -164,9 +174,11 @@ public class StatisticsGUI extends JFrame {
     private JTextField textField2;
     private JButton button3;
     private JLabel label5;
+    private JLabel label6;
+    private JLabel label7;
     private JButton button4;
     private Object[][] data = null;
-    private String head[] = {"商品ID","商品名称","销售量","销售额"};
+    private String head[] = {"商品ID","商品名称","销售量","销售额","更新时间"};
     private String sql[] = {
             "SELECT * FROM sales_volume;",
             "SELECT * FROM sales_volume ORDER BY volume DESC;",
