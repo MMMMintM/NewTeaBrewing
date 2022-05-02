@@ -92,7 +92,7 @@ public class Undate extends JFrame {
         button1.setText("\u66f4\u65b0 ");
         contentPane.add(button1);
         button1.setBounds(new Rectangle(new Point(215, 410), button1.getPreferredSize()));
-        button1.addActionListener(e ->{
+        button1.addActionListener(e ->{//监听
             int id;
             float price;
             if(textField2.getText().equals("")){
