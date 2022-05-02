@@ -45,13 +45,13 @@ public class MilkeTeaServerImpl implements MilkeTeaServer {
     }
 
     @Override
-    public String ServerUpdate(MilkeTea milkeTea) throws SQLException, ClassNotFoundException {
+    public String ServerUpdate(MilkeTea milkeTea,String name) throws SQLException, ClassNotFoundException {
 
 
         String results = null;
         MilkeTeaDao milkeTeaDao = new MilkeTeaImpl();
 
-        results = milkeTeaDao.UnDate(milkeTea, milkeTea.getTitle());
+        results = milkeTeaDao.UnDate(milkeTea, name);
 
         return results;
     }

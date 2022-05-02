@@ -3,7 +3,9 @@ package cn.edu.guet.hld.MilkeTeaDao.Impl;
 import cn.edu.guet.hld.MilkeTeaDao.MilkeTeaDao;
 import cn.edu.guet.hld.bean.MilkeTea;
 import cn.edu.guet.hld.util.ConnectionHander;
+import cn.edu.guet.hld.util.GetCommit;
 
+import javax.swing.*;
 import java.sql.*;
 
 /**
@@ -79,24 +81,28 @@ public class MilkeTeaImpl implements MilkeTeaDao {
         preparedStatement.setString(6, milkeTea.getImg_url());
 
         count = preparedStatement.executeUpdate();
+        GetCommit getCommit=new GetCommit();
+
 
         return count > 0 ? "添加成功" : "添加失败";
     }
 
     @Override
     public String Delete(String name) throws SQLException, ClassNotFoundException {
-        String sql = "delete from item where name=?";
+        String sql = "delete from item where title=?";
         Connection connection = ConnectionHander.getConnection();
         PreparedStatement preparedStatement = null;
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, name);
         int count = preparedStatement.executeUpdate();
+        GetCommit getCommit=new GetCommit();
+        getCommit.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         return count > 0 ? "删除成功" : "删除失败";
     }
 
     @Override
     public String UnDate(MilkeTea milkeTea, String name) throws SQLException, ClassNotFoundException {
-        String sql = "update item set id=?,title=?,price=?,description=?,sales=?,img_url=? where name=?";
+        String sql = "update item set id=?,title=?,price=?,description=?,sales=?,img_url=? where title=?";
         Connection connection = ConnectionHander.getConnection();
         PreparedStatement preparedStatement = null;
         preparedStatement = connection.prepareStatement(sql);
@@ -109,7 +115,10 @@ public class MilkeTeaImpl implements MilkeTeaDao {
         preparedStatement.setString(6, milkeTea.getImg_url());
         preparedStatement.setString(7, name);
 
+
         int count = preparedStatement.executeUpdate();
+        GetCommit getCommit=new GetCommit();
+
 
         return count > 0 ? "更新成功" : "更新失败";
     }

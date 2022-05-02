@@ -19,7 +19,7 @@ public class ConnectionHander {
             String sqlPassword = "LYHWYZZNSB.wan1/";
             connection= DriverManager.getConnection(url,sqlUserName,sqlPassword);
 
-
+            connection.setAutoCommit(false);
             threadLocal.set(connection);
         }
         return connection;
