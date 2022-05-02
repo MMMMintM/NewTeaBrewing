@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class SalesDaoImpl implements SalesDao {
     @Override
     /**
-     * 用于item的数据增加
+     * 用于跟随item的数据增加
      */
     public void insertSales(MilkeTea milkeTea) throws SQLException{
         Connection conn = null;
@@ -38,7 +38,7 @@ public class SalesDaoImpl implements SalesDao {
 
     @Override
     /**
-     * 用于item的数据删除
+     * 用于跟随item的数据删除
      */
     public void deleteSales(MilkeTea milkeTea) throws SQLException{
         Connection conn = null;
@@ -62,7 +62,7 @@ public class SalesDaoImpl implements SalesDao {
 
     @Override
     /**
-     * 用于item的数据修改
+     * 用于跟随item的数据修改
      */
     public void updateSale(MilkeTea milkeTea,String name) throws SQLException{
         Connection conn = null;
@@ -93,7 +93,7 @@ public class SalesDaoImpl implements SalesDao {
 
     @Override
     /**
-     * 用于order_info的数据修改
+     * 用于跟随order_info的数据修改
      */
     public void updateSaleVolume() throws SQLException{
 
