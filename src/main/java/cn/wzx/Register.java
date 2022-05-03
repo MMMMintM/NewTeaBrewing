@@ -33,7 +33,7 @@ public class Register extends JFrame {
         label1 = new JLabel();
         label2 = new JLabel();
         label3 = new JLabel();
-
+        label4 = new JLabel();
         textField1 = new JTextField();
         textField2 = new JTextField();
         textField3 = new JTextField();
@@ -43,26 +43,27 @@ public class Register extends JFrame {
         var contentPane = getContentPane();
         contentPane.setLayout(null);
 
+
         //---- label1 ----
         label1.setText("\u7528\u6237\u540d\uff1a");
         contentPane.add(label1);
-        label1.setBounds(new Rectangle(new Point(125, 75), label1.getPreferredSize()));
+        label1.setBounds(new Rectangle(new Point(80, 75), label1.getPreferredSize()));
 
         //---- label2 ----
         label2.setText("\u5bc6\u7801\uff1a");
         contentPane.add(label2);
-        label2.setBounds(new Rectangle(new Point(130, 125), label2.getPreferredSize()));
+        label2.setBounds(new Rectangle(new Point(85, 125), label2.getPreferredSize()));
 
         //---- label3 ----
         label3.setText("\u624b\u673a\u53f7\u7801:");
         contentPane.add(label3);
-        label3.setBounds(new Rectangle(new Point(120, 170), label3.getPreferredSize()));
+        label3.setBounds(new Rectangle(new Point(75, 170), label3.getPreferredSize()));
         contentPane.add(textField1);
-        textField1.setBounds(185, 75, 100, textField1.getPreferredSize().height);
+        textField1.setBounds(145, 75, 100, textField1.getPreferredSize().height);
         contentPane.add(textField2);
-        textField2.setBounds(185, 125, 100, textField2.getPreferredSize().height);
+        textField2.setBounds(145, 125, 100, textField2.getPreferredSize().height);
         contentPane.add(textField3);
-        textField3.setBounds(185, 170, 100, textField3.getPreferredSize().height);
+        textField3.setBounds(145, 170, 100, textField3.getPreferredSize().height);
 
         //---- button1 ----
         button1.addActionListener(
@@ -116,16 +117,15 @@ public class Register extends JFrame {
         );
         button1.setText("\u6ce8\u518c");
         contentPane.add(button1);
-        button1.setBounds(new Rectangle(new Point(180, 215), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(145, 215), button1.getPreferredSize()));
 
         //logoͼƬ
-        ImageIcon image=new ImageIcon("E:\\Java\\images\\logo.jpg");
-        label4 = new JLabel(image);
-        label4.setBounds(new Rectangle(new Point(0, 200), label4.getPreferredSize()));
+        label4.setIcon(new ImageIcon("C:\\Users\\Administrator\\Desktop\\5b0988e595225.cdn.sohucs.png"));
+        label4.setBounds(new Rectangle(new Point(0, 0), label4.getPreferredSize()));
         this.getContentPane().add(label4);
 
 
-        contentPane.setPreferredSize(new Dimension(400, 300));
+        contentPane.setPreferredSize(new Dimension(900, 300));
         pack();
         setLocationRelativeTo(getOwner());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -138,5 +138,7 @@ public class Register extends JFrame {
 
 
     // JFormDesigner - End of variables declaration  //GEN-END:variables
-
+    public static void main(String[] args) {
+        new Register();
+    }
 }
