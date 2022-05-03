@@ -132,7 +132,7 @@ public class StatisticsGUI extends JFrame {
         //---- label5 ----
         label5.setText("总销售额：" + GetTotalSales.getSales());
         contentPane.add(label5);
-        label5.setBounds(600, 430, 120, label5.getPreferredSize().height);
+        label5.setBounds(560, 430, 120, label5.getPreferredSize().height);
 
         //---- label6 ----
         label6.setText("当日销售额：" + GetDailySales.getSales());
@@ -142,7 +142,7 @@ public class StatisticsGUI extends JFrame {
         //---- label7 ----
         label7.setText("当月销售额：" + GetMonthlySales.getSales());
         contentPane.add(label7);
-        label7.setBounds(395, 430, 120, label7.getPreferredSize().height);
+        label7.setBounds(375, 430, 120, label7.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText("刷新");
@@ -168,7 +168,7 @@ public class StatisticsGUI extends JFrame {
         //-----button6-------
         button6.setText("往月销售额");
         contentPane.add(button6);
-        button6.setBounds(395,450,100,26);
+        button6.setBounds(375,450,100,26);
         button6.addActionListener(
                 e ->{
                     table1.setModel(ResetTable.reset(GetMonthTable.queryDate(sql[4],data,head[2]),head[2]));
