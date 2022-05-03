@@ -4,34 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="hdl">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_picture/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="修改了图片引入的位置、数据库的密码和IP地址">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewTeaBrewing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NewTeaBrewing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Learn.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Password.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Insert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Insert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Picture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Picture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Password.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/UpdateItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/UpdateItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/GUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/pay/WXPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/pay/WXPay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/sdk/WXPayRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/sdk/WXPayRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/util/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/util/DateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Login$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Main$1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.zt.statistics.GUI" />
+    <configuration name="Base" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.wzx.Base" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.zt.statistics.*" />
+          <option name="PATTERN" value="cn.edu.guet.wzx.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,9 +174,9 @@
       <list>
         <item itemvalue="Application.Register" />
         <item itemvalue="Application.Login" />
+        <item itemvalue="Application.Base" />
         <item itemvalue="Application.SelectInterface" />
         <item itemvalue="Application.Insert" />
-        <item itemvalue="Application.GUI" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +195,9 @@
       <workItem from="1651281374671" duration="59400000" />
       <workItem from="1651456808718" duration="13409000" />
       <workItem from="1651572856271" duration="2452000" />
-      <workItem from="1651575585128" duration="379000" />
+      <workItem from="1651575585128" duration="663000" />
+      <workItem from="1651580321915" duration="561000" />
+      <workItem from="1651581962686" duration="2797000" />
     </task>
     <task id="LOCAL-00001" summary="hdl">
       <created>1651302256860</created>
@@ -239,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651474492886</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改了图片引入的位置、数据库的密码和IP地址">
+      <created>1651576202563</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651576202563</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +248,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="感觉写得差不多了" />
     <MESSAGE value="hdl" />
-    <option name="LAST_COMMIT_MESSAGE" value="hdl" />
+    <MESSAGE value="修改了图片引入的位置、数据库的密码和IP地址" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了图片引入的位置、数据库的密码和IP地址" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

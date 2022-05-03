@@ -17,10 +17,10 @@ public class Login extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
-        textField1 = new JTextField("guet");
+        textField1 = new JTextField("");
         label2 = new JLabel();
         label3 = new JLabel();
-        textField2 = new JTextField("guet1234");
+        textField2 = new JTextField("");
         button1 = new JButton();
         button2 = new JButton();
         radioButton1 = new JRadioButton();
@@ -59,6 +59,10 @@ public class Login extends JFrame {
         radioButton2.setBounds(new Rectangle(new Point(210, 160), radioButton2.getPreferredSize()));
         radioButton2.setBounds(new Rectangle(new Point(170, 160), radioButton2.getPreferredSize()));
 
+        ButtonGroup bg=new ButtonGroup();
+        bg.add(radioButton1);
+        bg.add(radioButton2);
+
         //添加图片
         label3.setIcon(new ImageIcon("src\\main\\resources\\tea_picture\\logo.png"));
         label3.setBounds(new Rectangle(new Point(0, 0), label3.getPreferredSize()));
@@ -82,38 +86,55 @@ public class Login extends JFrame {
                     String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
                     Connection conn = null;
 
+
                     // sql查询语句
-                    String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
-                    System.out.println(sql);
+                    //String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
+                    //System.out.println(sql);
                     ResultSet rs = null;//结果集：内存，存储了查询到的数据；内存区有一个游标，执行完查询的时候，不指向任何记录
                     Statement stmt = null;//语句对象，容易产生注入攻击
+
                     try {
-                        conn = DriverManager.getConnection(url, user, dbPassword);
+                        conn=DriverManager.getConnection(url,user,dbPassword);
                         stmt = conn.createStatement();
-                        rs = stmt.executeQuery(sql);
-                        if (rs.next()) {//让游标向下移动一次
-                            /*
-                            身份选择功能
-                             */
-                            if(radioButton1.isSelected()){
+                        if(radioButton1.isSelected()){
+                            String sql = "SELECT * FROM customer WHERE name='" + username + "' AND password='" + password + "'";
+                            rs = stmt.executeQuery(sql);
+                            if (rs.next()){
+                                System.out.println("登录成功");
+                                this.setVisible(false);
+
                                 Main main=new Main();
                                 main.setVisible(true);
-                                System.out.println("登陆成功");
-
                             }
-                            else if(radioButton2.isSelected()){
-                                //跳转到管理员界面
-
-
+                            else{
+                                System.out.println("用户名或密码错误");
                             }
-                        } else {
-                            System.out.println("用户名或密码错误");
+
+
                         }
+                        else if(radioButton2.isSelected()){
+                            String sql1 = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
+
+                            rs = stmt.executeQuery(sql1);
+                            if (rs.next()){
+                                System.out.println("登录成功");
+                                this.setVisible(false);
+
+                            }
+                            else{
+                                System.out.println("用户名或密码错误");
+                            }
+
+                        }
+
+
                     } catch (SQLException ex) {
                         ex.printStackTrace();
                     }
+
                 }
         );
+
         button1.setText("\u767b\u5f55");
         contentPane.add(button1);
         button1.setBounds(new Rectangle(new Point(125, 200), button1.getPreferredSize()));
