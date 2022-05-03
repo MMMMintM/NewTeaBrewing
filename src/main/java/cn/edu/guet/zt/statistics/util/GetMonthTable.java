@@ -1,6 +1,7 @@
 package cn.edu.guet.zt.statistics.util;
 
-import cn.edu.guet.zt.statistics.bean.SalesVolume;
+import cn.edu.guet.zt.statistics.bean.DailySales;
+import cn.edu.guet.zt.statistics.bean.MonthlySales;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,12 +9,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class GetTable {
+public class GetMonthTable {
     /**
-     * 此类用于获得数据库的数据
+     *用于获取数据库表monthly_sales的数据
      */
     public static Object[][] queryDate(String sql,Object[][] data, String head[]){
-        java.util.List<SalesVolume> list= new ArrayList<SalesVolume>();
+        java.util.List<MonthlySales> list= new ArrayList<MonthlySales>();
 
         Statement stmt = null;
         Connection conn = null;
@@ -24,13 +25,10 @@ public class GetTable {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while(rs.next()){
-                SalesVolume sv = new SalesVolume();
-                sv.setId(rs.getInt(1));
-                sv.setTitle(rs.getString(2));
-                sv.setVolume(rs.getInt(3));
-                sv.setTotal_sales(rs.getInt(4));
-                sv.setUpdate_time(rs.getTime(5));
-                list.add(sv);
+                MonthlySales ms = new MonthlySales();
+                ms.setMonth(rs.getString(1));
+                ms.setSales(rs.getInt(2));
+                list.add(ms);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -51,16 +49,11 @@ public class GetTable {
         for(int i = 0;i < list.size();i++)
             for(int j = 0;j < head.length;j ++)
             {
-                data[i][0] = list.get(i).getId();
-                data[i][1] = list.get(i).getTitle();
-                data[i][2] = list.get(i).getVolume();
-                data[i][3] = list.get(i).getTotal_sales();
-                data[i][4] = list.get(i).getUpdate_time();
-
+                data[i][0] = list.get(i).getMonth();
+                data[i][1] = list.get(i).getSales();
             }
 
         return data;
     }
-
 
 }

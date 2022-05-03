@@ -42,10 +42,12 @@ public class StatisticsGUI extends JFrame {
         label6 = new JLabel();
         label7 = new JLabel();
         button4 = new JButton();
+        button5 = new JButton();
+        button6 = new JButton();
 
         GetTable getTable = new GetTable();
 
-        DefaultTableModel tableModel = new DefaultTableModel(GetTable.queryDate(sql[0],data,head),head){
+        DefaultTableModel tableModel = new DefaultTableModel(GetTable.queryDate(sql[0],data,head[0]),head[0]){
             public boolean isCellEditable(int row,int colume){
                 return false;
             }
@@ -75,7 +77,7 @@ public class StatisticsGUI extends JFrame {
         button1.setBounds(new Rectangle(new Point(40, 35), button1.getPreferredSize()));
         button1.addActionListener(
                 e->{
-                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[1],data,head),head));
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[1],data,head[0]),head[0]));
                 }
         );
 
@@ -85,7 +87,7 @@ public class StatisticsGUI extends JFrame {
         button2.setBounds(new Rectangle(new Point(40, 75), button2.getPreferredSize()));
         button2.addActionListener(
                 e->{
-                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[2],data,head),head));
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[2],data,head[0]),head[0]));
                 }
         );
 
@@ -122,7 +124,7 @@ public class StatisticsGUI extends JFrame {
                             "')<>0 AND INSTR(title,'" +
                             name +
                             "') <> 0;";
-                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql,data,head),head));
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql,data,head[0]),head[0]));
                 }
         );
 
@@ -148,7 +150,28 @@ public class StatisticsGUI extends JFrame {
         button4.setBounds(new Rectangle(new Point(5, 450), button4.getPreferredSize()));
         button4.addActionListener(
                 e -> {
-                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[0],data,head),head));
+                    table1.setModel(ResetTable.reset(GetTable.queryDate(sql[0],data,head[0]),head[0]));
+                }
+        );
+
+        //-----buttion5------
+        button5.setText("往日销售额");
+        contentPane.add(button5);
+        button5.setBounds(210,450,100,26);
+        button5.addActionListener(
+                e ->{
+                    table1.setModel(ResetTable.reset(GetDayTable.queryDate(sql[3],data,head[1]),head[1]));
+
+                }
+        );
+
+        //-----button6-------
+        button6.setText("往月销售额");
+        contentPane.add(button6);
+        button6.setBounds(395,450,100,26);
+        button6.addActionListener(
+                e ->{
+                    table1.setModel(ResetTable.reset(GetMonthTable.queryDate(sql[4],data,head[2]),head[2]));
                 }
         );
 
@@ -177,12 +200,20 @@ public class StatisticsGUI extends JFrame {
     private JLabel label6;
     private JLabel label7;
     private JButton button4;
+    private JButton button5;
+    private JButton button6;
     private Object[][] data = null;
-    private String head[] = {"商品ID","商品名称","销售量","销售额","更新时间"};
+    private String head[][] = {
+            {"商品ID","商品名称","销售量","销售额","更新时间"},
+            {"日期","销售额"},
+            {"月份","销售额"}
+    };
     private String sql[] = {
             "SELECT * FROM sales_volume;",
             "SELECT * FROM sales_volume ORDER BY volume DESC;",
-            "SELECT * FROM sales_volume ORDER BY total_sales DESC;"
+            "SELECT * FROM sales_volume ORDER BY total_sales DESC;",
+            "SELECT * FROM daily_sales;",
+            "SELECT * FROM monthly_sales"
     };
 
     // JFormDesigner - End of variables declaration  //GEN-END:variables
