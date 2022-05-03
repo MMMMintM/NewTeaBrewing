@@ -1,6 +1,7 @@
 package cn.edu.guet.zt.statistics.bean;
 
 import java.sql.Time;
+import java.util.Date;
 import java.util.Objects;
 
 public class SalesVolume {
@@ -12,7 +13,7 @@ public class SalesVolume {
     private String title;
     private int volume;
     private int total_sales;
-    private Time update_time;
+    private Date update_time;
 
     public int getId() {
         return id;
@@ -46,11 +47,11 @@ public class SalesVolume {
         this.total_sales = total_sales;
     }
 
-    public Time getUpdate_time() {
+    public Date getUpdate_time() {
         return update_time;
     }
 
-    public void setUpdate_time(Time update_time) {
+    public void setUpdate_time(Date update_time) {
         this.update_time = update_time;
     }
 

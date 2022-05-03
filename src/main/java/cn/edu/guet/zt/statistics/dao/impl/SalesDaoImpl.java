@@ -20,7 +20,7 @@ public class SalesDaoImpl implements SalesDao {
         try {
             conn  = ConnectionHander.getConnection();
 
-            String sql = "INSERT INTO sales_volume VALUES (?,?,0,0)";
+            String sql = "INSERT INTO sales_volume VALUES (?,?,0,0,CURDATE())";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
 
