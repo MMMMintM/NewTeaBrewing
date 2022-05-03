@@ -76,8 +76,8 @@ public class Register extends JFrame {
                         String Password = textField2.getText();
                         String phonenumber = textField2.getText();
                         String user = "root";
-                        String dbPassword = "123456";
-                        String url = "jdbc:mysql://localhost:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+                        String dbPassword = "LYHWYZZNSB.wan1/";
+                        String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
                         Connection conn = null;
                         // 拼sql，容易有注入攻击
                         String check="SELECT * FROM sys_user WHERE name='"+username+"'";
@@ -112,16 +112,16 @@ public class Register extends JFrame {
         button1.setBounds(new Rectangle(new Point(145, 215), button1.getPreferredSize()));
 
         //logo图片
-        ImageIcon image=new ImageIcon("E:\\Java\\images\\logo.jpg");
-        label4 = new JLabel(image);
+
+
         label4.setBounds(new Rectangle(new Point(0, 200), label4.getPreferredSize()));
-        label4.setIcon(new ImageIcon("C:\\Users\\Administrator\\Desktop\\5b0988e595225.cdn.sohucs.png"));
+        label4.setIcon(new ImageIcon("src\\main\\resources\\tea_picture\\logo.png"));
         label4.setBounds(new Rectangle(new Point(0, 0), label4.getPreferredSize()));
         this.getContentPane().add(label4);
 
 
-        contentPane.setPreferredSize(new Dimension(400, 300));
-        contentPane.setPreferredSize(new Dimension(900, 300));
+
+        contentPane.setPreferredSize(new Dimension(900, 280));
         pack();
         setLocationRelativeTo(getOwner());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

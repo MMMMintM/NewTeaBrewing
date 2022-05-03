@@ -60,7 +60,7 @@ public class Login extends JFrame {
         radioButton2.setBounds(new Rectangle(new Point(170, 160), radioButton2.getPreferredSize()));
 
         //添加图片
-        label3.setIcon(new ImageIcon("C:\\Users\\Administrator\\Desktop\\5b0988e595225.cdn.sohucs.png"));
+        label3.setIcon(new ImageIcon("src\\main\\resources\\tea_picture\\logo.png"));
         label3.setBounds(new Rectangle(new Point(0, 0), label3.getPreferredSize()));
         this.getContentPane().add(label3);
 
@@ -78,11 +78,10 @@ public class Login extends JFrame {
                     String username = textField1.getText();
                     String password = textField2.getText();
                     String user = "root";
-                    String dbPassword = "123456";
-                    String url = "jdbc:mysql://localhost:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-
+                    String dbPassword = "LYHWYZZNSB.wan1/";
+                    String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
                     Connection conn = null;
-                    // ?sql?????????????
+
                     // sql查询语句
                     String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
                     System.out.println(sql);
@@ -100,11 +99,12 @@ public class Login extends JFrame {
                                 Main main=new Main();
                                 main.setVisible(true);
                                 System.out.println("登陆成功");
-                                this.setVisible(false);
+
                             }
                             else if(radioButton2.isSelected()){
-                                Password pwd=new Password();
-                                pwd.setVisible(true);
+                                //跳转到管理员界面
+
+
                             }
                         } else {
                             System.out.println("用户名或密码错误");
@@ -136,8 +136,8 @@ public class Login extends JFrame {
 
 
 
-        contentPane.setPreferredSize(new Dimension(400, 300));
-        contentPane.setPreferredSize(new Dimension(900, 300));
+        contentPane.setPreferredSize(new Dimension(900, 280));
+
         pack();
         setLocationRelativeTo(getOwner());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -5,19 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="hdl">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_picture/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/MilkeTeaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/MilkeTeaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/Impl/MilkeTeaServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/Impl/MilkeTeaServerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/MilkeTeaServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaServer/MilkeTeaServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/bean/MilkeTea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/bean/MilkeTea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/ConnectionHander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/ConnectionHander.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Insert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Picture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Undate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Undate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewTeaBrewing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NewTeaBrewing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Learn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Password.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Insert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Insert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Picture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Picture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Password.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/UpdateItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/UpdateItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/pay/WXPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/pay/WXPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/sdk/WXPayRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/sdk/WXPayRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/util/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/util/DateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Main$1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +97,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg" />
+    <property name="last_opened_file_path" value="E:/Java/TeaShop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -91,32 +105,33 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java\NewTeaBrewing\src\main\resources\tea_picture" />
       <recent name="C:\Users\86188\Desktop\NewTeaBrewing\NewTeaBrewing\src\main\java\cn\edu\guet\hld\jpg" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.edu.guet.hld.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SelectInterface">
+  <component name="RunManager" selected="Application.Register">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.edu.guet.zt.statistics.GUI" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cn.edu.guet.zt.statistics.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetCommit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hld.util.GetCommit" />
-      <module name="NewTeaBrewing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.guet.hld.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,12 +152,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Picture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hld.util.Picture" />
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.wzx.Login" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.hld.util.*" />
+          <option name="PATTERN" value="cn.edu.guet.wzx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Register" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.wzx.Register" />
+      <module name="NewTeaBrewing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.guet.wzx.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,26 +191,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Register" />
+        <item itemvalue="Application.Login" />
         <item itemvalue="Application.SelectInterface" />
         <item itemvalue="Application.Insert" />
         <item itemvalue="Application.GUI" />
-        <item itemvalue="Application.Picture" />
-        <item itemvalue="Application.GetCommit" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +215,8 @@
       <workItem from="1651281298896" duration="34000" />
       <workItem from="1651281374671" duration="59400000" />
       <workItem from="1651456808718" duration="13409000" />
+      <workItem from="1651572856271" duration="2452000" />
+      <workItem from="1651575585128" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="hdl">
       <created>1651302256860</created>
@@ -228,9 +245,31 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="感觉写得差不多了" />
     <MESSAGE value="hdl" />
     <option name="LAST_COMMIT_MESSAGE" value="hdl" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

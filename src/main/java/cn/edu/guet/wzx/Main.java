@@ -1,10 +1,9 @@
 package cn.edu.guet.wzx;
-
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -39,24 +38,24 @@ public class Main extends JFrame {
         label1.setFont(new
                 Font("STHeiti Light", Font.BOLD,
                 30));
-        label1.setText("��Ʒ��Ϣ");
+        label1.setText("商品信息");
         contentPane.add(label1);
         label1.setBounds(460, 0, 600, 60);
 
-        button1.setText("ɾ��");
+        button1.setText("删除");
         contentPane.add(button1);
         button1.setBounds(510, 355, 100, 30);
 
-        button2.setText("����");
+        button2.setText("新增");
         contentPane.add(button2);
         button2.setBounds(610, 355, 100, 30);
 
-        button3.setText("�޸�");
+        button3.setText("修改");
         contentPane.add(button3);
         button3.setBounds(710, 355, 100, 30);
         button3.addActionListener(
                 (e)->{
-                    int rowNo = table1.getSelectedRow();//��ȡ��ѡ���к�
+                    int rowNo = table1.getSelectedRow();//获取所选的行号
                     int id=(int)table1.getValueAt(rowNo, 0);
                     String title=(String)table1.getValueAt(rowNo, 1);
                     Float price=(Float)table1.getValueAt(rowNo, 2);
@@ -80,7 +79,7 @@ public class Main extends JFrame {
         contentPane.add(textField1);
         textField1.setBounds(270, 355, 130, 30);
 
-        button4.setText("��ѯ");
+        button4.setText("查询");
         contentPane.add(button4);
         button4.setBounds(410, 355, 100, 30);
 
@@ -113,8 +112,8 @@ public class Main extends JFrame {
         java.util.List<Item> list = new ArrayList<Item>();
         Connection conn = null;
         String user = "root";
-        String dbPassword = "123456";
-        String url = "jdbc:mysql://localhost:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+        String dbPassword = "LYHWYZZNSB.wan1/";
+        String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
         Statement stmt = null;
         String sql = "SELECT * FROM item";
         ResultSet rs = null;
@@ -144,7 +143,7 @@ public class Main extends JFrame {
             }
 
         }
-        // �Ѽ��ϵ����ݣ���Ʒ��Ϣ��ת���ɶ�ά����
+        // 把集合的数据（商品信息）转换成二维数组
         data = new Object[list.size()][head.length];
 
         for (int i = 0; i < list.size(); i++) {
@@ -162,7 +161,7 @@ public class Main extends JFrame {
 
     private JScrollPane scrollPane1;
     private JTable table1;
-    private String head[] = {"id", "��Ʒ����", "����", "����", "������", "��ƷͼƬ"};
+    private String head[] = {"id", "商品名称", "单价", "描述", "促销价", "商品图片"};
     private Object[][] data = null;
     private JButton button1;
     private JButton button2;
