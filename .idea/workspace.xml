@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="修改了图片引入的位置、数据库的密码和IP地址">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Learn.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Register.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,11 @@
         </map>
       </branch-storage>
     </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -88,10 +93,11 @@
       <recent name="C:\Users\86188\Desktop\NewTeaBrewing\NewTeaBrewing\src\main\java\cn\edu\guet\hld\jpg" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.edu.guet.wzx" />
       <recent name="cn.edu.guet.hld.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Register">
+  <component name="RunManager" selected="Application.Login">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -172,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Register" />
         <item itemvalue="Application.Login" />
-        <item itemvalue="Application.Base" />
         <item itemvalue="Application.SelectInterface" />
+        <item itemvalue="Application.Register" />
         <item itemvalue="Application.Insert" />
+        <item itemvalue="Application.Base" />
       </list>
     </recent_temporary>
   </component>

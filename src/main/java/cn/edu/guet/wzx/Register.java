@@ -4,8 +4,7 @@
 package cn.edu.guet.wzx;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.sql.*;
 /**
  * @author 1
@@ -62,11 +61,68 @@ public class Register extends JFrame {
 
         contentPane.add(textField1);
         textField1.setBounds(140, 70, 100, textField1.getPreferredSize().height);
+        textField1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                char keyChar=e.getKeyChar();
+
+                if(((keyChar>='0'&&keyChar<='9')||(keyChar>='a'&&keyChar<='z')||(keyChar>='A'&&keyChar<='Z'))
+                        &&textField1.getText().length()<20){
+                    return;
+                }
+                //当输入出现在限制之外时会出现提示音并且不允许输入
+                Toolkit.getDefaultToolkit().beep();
+                System.out.println("输入格式不规范，只能输入因为字母和数字");
+                e.consume();
+
+
+            }
+        });
+
         contentPane.add(textField2);
         textField2.setBounds(140, 105, 100, textField2.getPreferredSize().height);
+        textField2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                char keyChar=e.getKeyChar();
+                if(((keyChar>='0'&&keyChar<='9')||(keyChar>='a'&&keyChar<='z')||(keyChar>='A'&&keyChar<='Z')
+                        ||keyChar=='.'||keyChar==',')&&textField2.getText().length()<=12){
+                    return;
+
+                }
+
+                //当输入出现在限制之外时会出现提示音并且不允许输入
+                Toolkit.getDefaultToolkit().beep();
+                System.out.println("输入格式不规范，只能输入因为字母和数字和“，”“.”");
+                e.consume();
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e){
+                String keyText = KeyEvent.getKeyText(e.getKeyCode());
+
+            }
+        });
+
         contentPane.add(textField3);
         textField3.setBounds(140, 140, 100, textField3.getPreferredSize().height);
-
+        textField3.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                char keyChar=e.getKeyChar();
+                if(keyChar>='0'&&keyChar<='9'&&textField3.getText().length()<=11){
+                    return;
+                }
+                //当输入出现在限制之外时会出现提示音并且不允许输入
+                Toolkit.getDefaultToolkit().beep();
+                System.out.println("输入格式不规范，只能输入数字");
+                //System.out.println("输入格式不规范，只能输入数字且只允许输入8至11个数字");
+                e.consume();
+            }
+        });
 
         radioButton1.setText("\u7528\u6237");
         contentPane.add(radioButton1);
@@ -110,13 +166,17 @@ public class Register extends JFrame {
                                 if (username!=null&&username!=""&&!rs.next()){
                                     String sql = "INSERT INTO  customer (name,password,mobile) VALUES(?,?,?)";
                                     PreparedStatement pstmt=conn.prepareStatement(sql);
-                                    pstmt.setString(1,username);
-                                    pstmt.setString(2,Password);
-                                    pstmt.setString(3,phonenumber);
-                                    pstmt.executeUpdate();//执行sql语句
-                                    System.out.println("注册成功");
-                                    Login login=new Login();
-                                    login.setVisible(true);
+                                    if (username != null && Password != null&&phonenumber!=null) {
+                                        pstmt.setString(1, username);
+                                        pstmt.setString(2, Password);
+                                        pstmt.setString(3, phonenumber);
+                                        pstmt.executeUpdate();//执行sql语句
+                                        System.out.println("注册成功");
+
+                                        Login login = new Login();
+                                        login.setVisible(true);
+                                        dispose();
+                                    }
                                 }
                                 else{
                                     System.out.println("账号已存在或者账号不符合规则");
@@ -127,16 +187,20 @@ public class Register extends JFrame {
                                 String check="SELECT * FROM sys_user WHERE name='"+username+"'";
 
                                 rs = stmt.executeQuery(check);
-                                if (username!=null&&username!=""&&!rs.next()){
+                                if (username!=null&&username!=""&&!rs.next()) {
                                     String sql = "INSERT INTO  sys_user (name,password,mobile) VALUES(?,?,?)";
-                                    PreparedStatement pstmt=conn.prepareStatement(sql);
-                                    pstmt.setString(1,username);
-                                    pstmt.setString(2,Password);
-                                    pstmt.setString(3,phonenumber);
-                                    pstmt.executeUpdate();//执行sql语句
-                                    System.out.println("注册成功");
-                                    Login login=new Login();
-                                    login.setVisible(true);
+                                    PreparedStatement pstmt = conn.prepareStatement(sql);
+                                    if (username != null && Password != null) {
+                                        pstmt.setString(1, username);
+                                        pstmt.setString(2, Password);
+                                        pstmt.setString(3, phonenumber);
+                                        pstmt.executeUpdate();//执行sql语句
+                                        System.out.println("注册成功");
+
+                                        Login login = new Login();
+                                        login.setVisible(true);
+                                        dispose();
+                                    }
 
                                 }
                                 else{
@@ -154,13 +218,13 @@ public class Register extends JFrame {
         );
         button1.setText("\u6ce8\u518c");
         contentPane.add(button1);
-        button1.setBounds(new Rectangle(new Point(180, 215), button1.getPreferredSize()));
+        //button1.setBounds(new Rectangle(new Point(180, 215), button1.getPreferredSize()));
         button1.setBounds(new Rectangle(new Point(145, 215), button1.getPreferredSize()));
 
         //logo图片
 
 
-        label4.setBounds(new Rectangle(new Point(0, 200), label4.getPreferredSize()));
+        //label4.setBounds(new Rectangle(new Point(0, 200), label4.getPreferredSize()));
         label4.setIcon(new ImageIcon("src\\main\\resources\\tea_picture\\logo.png"));
         label4.setBounds(new Rectangle(new Point(0, 0), label4.getPreferredSize()));
         this.getContentPane().add(label4);
@@ -170,7 +234,18 @@ public class Register extends JFrame {
         contentPane.setPreferredSize(new Dimension(900, 280));
         pack();
         setLocationRelativeTo(getOwner());
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                Login login=new Login();
+                login.setVisible(true);
+                dispose();
+            }
+        });
+
         this.setResizable(false);
         this.setVisible(true);//设置组件可见
         // JFormDesigner - End of component initialization  //GEN-END:initComponents

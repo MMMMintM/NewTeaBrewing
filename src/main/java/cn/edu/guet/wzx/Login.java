@@ -1,4 +1,7 @@
-package cn.wzx;
+package cn.edu.guet.wzx;
+
+import cn.edu.guet.wzx.Main;
+import cn.edu.guet.wzx.Register;
 
 import javax.swing.*;
 import java.awt.*;
@@ -55,11 +58,11 @@ public class Login extends JFrame {
         radioButton1.setBounds(new Rectangle(new Point(90, 160), radioButton1.getPreferredSize()));
 
         //---- radioButton2 ----
-        radioButton2.setText("ÉÌ¼Ò");
+        radioButton2.setText("å•†å®¶");
         contentPane.add(radioButton2);
         radioButton2.setBounds(new Rectangle(new Point(170, 160), radioButton2.getPreferredSize()));
 
-        //Ìí¼ÓÍ¼Æ¬
+        //æ·»åŠ å›¾ç‰‡
         label3.setIcon(new ImageIcon("C:\\Users\\Administrator\\Desktop\\5b0988e595225.cdn.sohucs.png"));
         label3.setBounds(new Rectangle(new Point(0, 0), label3.getPreferredSize()));
         this.getContentPane().add(label3);
@@ -69,10 +72,10 @@ public class Login extends JFrame {
         button1.addActionListener(
                 (e) -> {
                     /*
-                    1¡¢ÄÃµ½µÇÂ¼½çÃæµÄÓÃ»§ÃûºÍÃÜÂë
-                    2¡¢È¥ºÍÊı¾İ¿âÖĞµÄÓÃ»§ÃûºÍÃÜÂë±È¶Ô
-                    3¡¢´´½¨ÁËÊı¾İ¿âºÍ±í
-                    4¡¢Ìí¼ÓÒ»Ìõ¼ÇÂ¼
+                    1ã€æ‹¿åˆ°ç™»å½•ç•Œé¢çš„ç”¨æˆ·åå’Œå¯†ç 
+                    2ã€å»å’Œæ•°æ®åº“ä¸­çš„ç”¨æˆ·åå’Œå¯†ç æ¯”å¯¹
+                    3ã€åˆ›å»ºäº†æ•°æ®åº“å’Œè¡¨
+                    4ã€æ·»åŠ ä¸€æ¡è®°å½•
                     INSERT INTO sys_user (id,name,password) VALUES(1111,'guet','guet1234');
                      */
                     String username = textField1.getText();
@@ -83,37 +86,37 @@ public class Login extends JFrame {
                     String url = "jdbc:mysql://localhost:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
                     Connection conn = null;
-                    // sql²éÑ¯Óï¾ä
+                    // sqlæŸ¥è¯¢è¯­å¥
                     String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
                     System.out.println(sql);
-                    ResultSet rs = null;//½á¹û¼¯£ºÄÚ´æ£¬´æ´¢ÁË²éÑ¯µ½µÄÊı¾İ£»ÄÚ´æÇøÓĞÒ»¸öÓÎ±ê£¬Ö´ĞĞÍê²éÑ¯µÄÊ±ºò£¬²»Ö¸ÏòÈÎºÎ¼ÇÂ¼
-                    Statement stmt = null;//Óï¾ä¶ÔÏó£¬ÈİÒ×²úÉú×¢Èë¹¥»÷
+                    ResultSet rs = null;//ç»“æœé›†ï¼šå†…å­˜ï¼Œå­˜å‚¨äº†æŸ¥è¯¢åˆ°çš„æ•°æ®ï¼›å†…å­˜åŒºæœ‰ä¸€ä¸ªæ¸¸æ ‡ï¼Œæ‰§è¡Œå®ŒæŸ¥è¯¢çš„æ—¶å€™ï¼Œä¸æŒ‡å‘ä»»ä½•è®°å½•
+                    Statement stmt = null;//è¯­å¥å¯¹è±¡ï¼Œå®¹æ˜“äº§ç”Ÿæ³¨å…¥æ”»å‡»
 
                     try {
                         conn = DriverManager.getConnection(url, user, dbPassword);
 
                         stmt = conn.createStatement();
                         rs = stmt.executeQuery(sql);
-                        if (rs.next()) {//ÈÃÓÎ±êÏòÏÂÒÆ¶¯Ò»´Î
+                        if (rs.next()) {//è®©æ¸¸æ ‡å‘ä¸‹ç§»åŠ¨ä¸€æ¬¡
 
                             /*
-                            Éí·İÑ¡Ôñ¹¦ÄÜ
+                            èº«ä»½é€‰æ‹©åŠŸèƒ½
                              */
                         if(radioButton1.isSelected()){
 
                             Main main=new Main();
                             main.setVisible(true);
-                            System.out.println("µÇÂ½³É¹¦");
+                            System.out.println("ç™»é™†æˆåŠŸ");
                             this.setVisible(false);
                         }
                         else if(radioButton2.isSelected()){
-                            Password pwd=new Password();
-                            pwd.setVisible(true);
+                            //è·³è½¬åˆ°å•†å®¶ç•Œé¢
+
                         }
 
 
                         } else {
-                            System.out.println("ÓÃ»§Ãû»òÃÜÂë´íÎó");
+                            System.out.println("ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯");
                         }
                     } catch (SQLException ex) {
                         ex.printStackTrace();
@@ -131,11 +134,12 @@ public class Login extends JFrame {
                     public void actionPerformed(ActionEvent e) {
                         Register register=new Register();
                         register.setVisible(true);
+                        dispose();
 
                     }
                 }
         );
-        button2.setText("×¢²á");
+        button2.setText("æ³¨å†Œ");
         contentPane.add(button2);
         button2.setBounds(new Rectangle(new Point(180, 200), button1.getPreferredSize()));
 
@@ -146,7 +150,7 @@ public class Login extends JFrame {
         setLocationRelativeTo(getOwner());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.setVisible(true);//×é¼şÉèÖÃÎª¿É¼û
+        this.setVisible(true);//ç»„ä»¶è®¾ç½®ä¸ºå¯è§
     }
 
     private JLabel label1;
