@@ -10,7 +10,7 @@ import java.sql.*;
 /**
  * @author 1
  */
-public class Register extends JFrame {
+public class Base extends JFrame {
     private JLabel label1;
     private JLabel label2;
     private JLabel label3;
@@ -19,9 +19,7 @@ public class Register extends JFrame {
     private JTextField textField2;
     private JTextField textField3;
     private JButton button1;
-    private JRadioButton radioButton1;
-    private JRadioButton radioButton2;
-    public Register() {
+    public Base() {
         initComponents();
     }
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
@@ -36,9 +34,6 @@ public class Register extends JFrame {
         textField2 = new JTextField();
         textField3 = new JTextField();
         button1 = new JButton();
-        radioButton1 = new JRadioButton();
-        radioButton2 = new JRadioButton();
-
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
@@ -47,39 +42,29 @@ public class Register extends JFrame {
         //---- label1 ----
         label1.setText("\u7528\u6237\u540d\uff1a");
         contentPane.add(label1);
-
-        label1.setBounds(new Rectangle(new Point(80, 70), label1.getPreferredSize()));
+        label1.setBounds(new Rectangle(new Point(125, 75), label1.getPreferredSize()));
+        label1.setBounds(new Rectangle(new Point(80, 75), label1.getPreferredSize()));
 
         //---- label2 ----
         label2.setText("\u5bc6\u7801\uff1a");
         contentPane.add(label2);
-        label2.setBounds(new Rectangle(new Point(85, 105), label2.getPreferredSize()));
+        label2.setBounds(new Rectangle(new Point(130, 125), label2.getPreferredSize()));
+        label2.setBounds(new Rectangle(new Point(85, 125), label2.getPreferredSize()));
 
         //---- label3 ----
         label3.setText("\u624b\u673a\u53f7\u7801:");
         contentPane.add(label3);
-        label3.setBounds(new Rectangle(new Point(75, 140), label3.getPreferredSize()));
-
+        label3.setBounds(new Rectangle(new Point(120, 170), label3.getPreferredSize()));
+        label3.setBounds(new Rectangle(new Point(75, 170), label3.getPreferredSize()));
         contentPane.add(textField1);
-        textField1.setBounds(140, 70, 100, textField1.getPreferredSize().height);
+        textField1.setBounds(185, 75, 100, textField1.getPreferredSize().height);
+        textField1.setBounds(145, 75, 100, textField1.getPreferredSize().height);
         contentPane.add(textField2);
-        textField2.setBounds(140, 105, 100, textField2.getPreferredSize().height);
+        textField2.setBounds(185, 125, 100, textField2.getPreferredSize().height);
+        textField2.setBounds(145, 125, 100, textField2.getPreferredSize().height);
         contentPane.add(textField3);
-        textField3.setBounds(140, 140, 100, textField3.getPreferredSize().height);
-
-
-        radioButton1.setText("\u7528\u6237");
-        contentPane.add(radioButton1);
-        radioButton1.setBounds(new Rectangle(new Point(90, 170), radioButton1.getPreferredSize()));
-
-        //---- radioButton2 ----
-        radioButton2.setText("商家");
-        contentPane.add(radioButton2);
-        radioButton2.setBounds(new Rectangle(new Point(170, 170), radioButton2.getPreferredSize()));
-
-        ButtonGroup bg=new ButtonGroup();
-        bg.add(radioButton1);
-        bg.add(radioButton2);
+        textField3.setBounds(185, 170, 100, textField3.getPreferredSize().height);
+        textField3.setBounds(145, 170, 100, textField3.getPreferredSize().height);
 
         //---- button1 ----
         button1.addActionListener(
@@ -95,57 +80,26 @@ public class Register extends JFrame {
                         String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
                         Connection conn = null;
                         // 拼sql，容易有注入攻击
-
-
-                        ResultSet rs = null;//结果集：内存，存储了查询到的数据；内存区有一个游标，执行完查询的时候，不指向任何记录
-                        ResultSet rs1 = null;
+                        String check="SELECT * FROM sys_user WHERE name='"+username+"'";
                         //System.out.println(sql);
                         try {
                             conn=DriverManager.getConnection(url,user,dbPassword);
                             Statement stmt = conn.createStatement();
-
-                            if(radioButton1.isSelected()){
-                                String check1="SELECT * FROM customer WHERE name='"+username+"'";
-                                rs = stmt.executeQuery(check1);
-                                if (username!=null&&username!=""&&!rs.next()){
-                                    String sql = "INSERT INTO  customer (name,password,mobile) VALUES(?,?,?)";
-                                    PreparedStatement pstmt=conn.prepareStatement(sql);
-                                    pstmt.setString(1,username);
-                                    pstmt.setString(2,Password);
-                                    pstmt.setString(3,phonenumber);
-                                    pstmt.executeUpdate();//执行sql语句
-                                    System.out.println("注册成功");
-                                    Login login=new Login();
-                                    login.setVisible(true);
-                                }
-                                else{
-                                    System.out.println("账号已存在或者账号不符合规则");
-                                }
-
+                            ResultSet rs = stmt.executeQuery(check);
+                            System.out.println(rs);
+                            if(username!=null&&username!=""&&!rs.next()){
+                                String sql = "INSERT INTO  sys_user (name,password,mobile) VALUES(?,?,?)";
+                                PreparedStatement pstmt=conn.prepareStatement(sql);
+                                pstmt.setString(1,username);
+                                pstmt.setString(2,Password);
+                                pstmt.setString(3,phonenumber);
+                                pstmt.executeUpdate();//执行sql语句
+                                System.out.println("注册成功");
+                                Login login=new Login();
+                                login.setVisible(true);
+                            }else {
+                                System.out.println("账号已存在或者账号不符合规则");
                             }
-                            else if(radioButton2.isSelected()){
-                                String check="SELECT * FROM sys_user WHERE name='"+username+"'";
-
-                                rs = stmt.executeQuery(check);
-                                if (username!=null&&username!=""&&!rs.next()){
-                                    String sql = "INSERT INTO  sys_user (name,password,mobile) VALUES(?,?,?)";
-                                    PreparedStatement pstmt=conn.prepareStatement(sql);
-                                    pstmt.setString(1,username);
-                                    pstmt.setString(2,Password);
-                                    pstmt.setString(3,phonenumber);
-                                    pstmt.executeUpdate();//执行sql语句
-                                    System.out.println("注册成功");
-                                    Login login=new Login();
-                                    login.setVisible(true);
-
-                                }
-                                else{
-                                    System.out.println("账号已存在或者账号不符合规则");
-                                }
-
-                            }
-
-
                         } catch (SQLException ex) {
                             ex.printStackTrace();
                         }
@@ -180,6 +134,6 @@ public class Register extends JFrame {
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
     public static void main(String[] args) {
-        new Register();
+        new Base();
     }
 }
