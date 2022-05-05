@@ -62,8 +62,12 @@ public class Login extends JFrame {
         contentPane.add(radioButton2);
         radioButton2.setBounds(new Rectangle(new Point(170, 160), radioButton2.getPreferredSize()));
 
+        ButtonGroup bg=new ButtonGroup();
+        bg.add(radioButton1);
+        bg.add(radioButton2);
+
         //添加图片
-        label3.setIcon(new ImageIcon("C:\\Users\\Administrator\\Desktop\\5b0988e595225.cdn.sohucs.png"));
+        label3.setIcon(new ImageIcon("src\\main\\resources\\tea_picture\\logo.png"));
         label3.setBounds(new Rectangle(new Point(0, 0), label3.getPreferredSize()));
         this.getContentPane().add(label3);
 
