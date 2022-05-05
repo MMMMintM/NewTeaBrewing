@@ -2,6 +2,7 @@ package cn.edu.guet.zt.statistics.dao.impl;
 
 import cn.edu.guet.hld.bean.MilkeTea;
 import cn.edu.guet.hld.util.ConnectionHander;
+import cn.edu.guet.zt.statistics.bean.OrderInfo;
 import cn.edu.guet.zt.statistics.bean.SalesVolume;
 import cn.edu.guet.zt.statistics.dao.SalesDao;
 
@@ -95,7 +96,28 @@ public class SalesDaoImpl implements SalesDao {
     /**
      * 用于跟随order_info的数据修改
      */
-    public void updateSaleVolume() throws SQLException{
+    public void updateSaleVolume(OrderInfo orderInfo) throws SQLException{
+        Connection conn = null;
+
+        try {
+            conn  = ConnectionHander.getConnection();
+
+
+
+            String sql = "UPDATE sales_volume SET total_sales = total_Sales + ?,update_time = CURDATE() WHERE id = ?;";
+
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            pstmt.setInt(1,orderInfo.getOrder_price());
+            pstmt.setInt(2,orderInfo.getId());
+
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new SQLException();
+        }
 
     }
+
 }

@@ -1,6 +1,7 @@
 package cn.edu.guet.zt.statistics.dao;
 
 import cn.edu.guet.hld.bean.MilkeTea;
+import cn.edu.guet.zt.statistics.bean.OrderInfo;
 import cn.edu.guet.zt.statistics.bean.SalesVolume;
 
 import java.sql.SQLException;
@@ -15,6 +16,6 @@ public interface SalesDao {
 
     void updateSale(MilkeTea milkeTea,String name) throws SQLException;
 
-    void updateSaleVolume() throws SQLException;
+    void updateSaleVolume(OrderInfo orderInfo) throws SQLException;
 
 }

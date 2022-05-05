@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="修改了图片引入的位置、数据库的密码和IP地址">
+    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="删除了商家的注册选项&#10;给账号和密码的设定增加了限制">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/bean/OrderInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/DailySalesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/DailySalesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/SalesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/SalesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/DailySalesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/DailySalesDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +214,7 @@
       <workItem from="1651580321915" duration="561000" />
       <workItem from="1651581962686" duration="2797000" />
       <workItem from="1651671758892" duration="3067000" />
+      <workItem from="1651756782948" duration="5661000" />
     </task>
     <task id="LOCAL-00001" summary="hdl">
       <created>1651302256860</created>
@@ -239,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651576202563</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="删除了商家的注册选项&#10;给账号和密码的设定增加了限制">
+      <created>1651752262516</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651752262516</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +273,8 @@
     <MESSAGE value="感觉写得差不多了" />
     <MESSAGE value="hdl" />
     <MESSAGE value="修改了图片引入的位置、数据库的密码和IP地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了图片引入的位置、数据库的密码和IP地址" />
+    <MESSAGE value="删除了商家的注册选项&#10;给账号和密码的设定增加了限制" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除了商家的注册选项&#10;给账号和密码的设定增加了限制" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
