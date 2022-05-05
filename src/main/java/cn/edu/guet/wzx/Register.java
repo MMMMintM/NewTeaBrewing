@@ -18,8 +18,6 @@ public class Register extends JFrame {
     private JTextField textField2;
     private JTextField textField3;
     private JButton button1;
-    private JRadioButton radioButton1;
-    private JRadioButton radioButton2;
     public Register() {
         initComponents();
     }
@@ -35,8 +33,6 @@ public class Register extends JFrame {
         textField2 = new JTextField();
         textField3 = new JTextField();
         button1 = new JButton();
-        radioButton1 = new JRadioButton();
-        radioButton2 = new JRadioButton();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -127,18 +123,7 @@ public class Register extends JFrame {
             }
         });
 
-        radioButton1.setText("\u7528\u6237");
-        contentPane.add(radioButton1);
-        radioButton1.setBounds(new Rectangle(new Point(90, 170), radioButton1.getPreferredSize()));
 
-        //---- radioButton2 ----
-        radioButton2.setText("商家");
-        contentPane.add(radioButton2);
-        radioButton2.setBounds(new Rectangle(new Point(170, 170), radioButton2.getPreferredSize()));
-
-        ButtonGroup bg=new ButtonGroup();
-        bg.add(radioButton1);
-        bg.add(radioButton2);
 
         //---- button1 ----
         button1.addActionListener(
@@ -159,64 +144,41 @@ public class Register extends JFrame {
                         ResultSet rs = null;//结果集：内存，存储了查询到的数据；内存区有一个游标，执行完查询的时候，不指向任何记录
                         ResultSet rs1 = null;
                         //System.out.println(sql);
-                        try {
-                            conn=DriverManager.getConnection(url,user,dbPassword);
-                            Statement stmt = conn.createStatement();
+                        if(username.length() == 0 && Password.length() < 6 ){
+                            JOptionPane.showMessageDialog(null, "账号已存在或者账号和密码不符合规则","格式错误",JOptionPane.ERROR_MESSAGE);
+                        } else{
+                            try {
+                                conn=DriverManager.getConnection(url,user,dbPassword);
+                                Statement stmt = conn.createStatement();
 
-                            if(radioButton1.isSelected()){
-                                String check1="SELECT * FROM customer WHERE name='"+username+"'";
-                                rs = stmt.executeQuery(check1);
-                                if (username!=null&&username!=""&&!rs.next()){
-                                    String sql = "INSERT INTO  customer (name,password,mobile) VALUES(?,?,?)";
-                                    PreparedStatement pstmt=conn.prepareStatement(sql);
+                                    String check1="SELECT * FROM customer WHERE name='"+username+"'";
+                                    rs = stmt.executeQuery(check1);
+                                    if (username!=null&&username!=""&&!rs.next()){
+                                        String sql = "INSERT INTO  customer (name,password,mobile) VALUES(?,?,?)";
+                                        PreparedStatement pstmt=conn.prepareStatement(sql);
 
-                                    pstmt.setString(1, username);
-                                    pstmt.setString(2, Password);
-                                    pstmt.setString(3, phonenumber);
-                                    pstmt.executeUpdate();//执行sql语句
-                                    System.out.println("注册成功");
+                                        pstmt.setString(1, username);
+                                        pstmt.setString(2, Password);
+                                        pstmt.setString(3, phonenumber);
+                                        pstmt.executeUpdate();//执行sql语句
+                                        System.out.println("注册成功");
 
-                                    Login login = new Login();
-                                    login.setVisible(true);
-                                    dispose();
+                                        Login login = new Login();
+                                        login.setVisible(true);
+                                        dispose();
 
-                                }
-                                else{
-                                    JOptionPane.showMessageDialog(null, "账号已存在或者账号和密码不符合规则","格式错误",JOptionPane.ERROR_MESSAGE);
-                                    //System.out.println("账号已存在或者账号不符合规则");
-                                }
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(null, "账号已存在或者账号和密码不符合规则","格式错误",JOptionPane.ERROR_MESSAGE);
+                                        //System.out.println("账号已存在或者账号不符合规则");
+                                    }
 
+
+                            } catch (SQLException ex) {
+                                ex.printStackTrace();
                             }
-                            else if(radioButton2.isSelected()){
-                                String check="SELECT * FROM sys_user WHERE name='"+username+"'";
-
-                                rs = stmt.executeQuery(check);
-                                if (username!=null&&username!=""&&!rs.next()) {
-                                    String sql = "INSERT INTO  sys_user (name,password,mobile) VALUES(?,?,?)";
-                                    PreparedStatement pstmt = conn.prepareStatement(sql);
-
-                                    pstmt.setString(1, username);
-                                    pstmt.setString(2, Password);
-                                    pstmt.setString(3, phonenumber);
-                                    pstmt.executeUpdate();//执行sql语句
-                                    System.out.println("注册成功");
-
-                                    Login login = new Login();
-                                    login.setVisible(true);
-                                    dispose();
-
-
-                                }
-                                else{
-                                    JOptionPane.showMessageDialog(null, "账号已存在或者账号和密码不符合规则","格式错误",JOptionPane.ERROR_MESSAGE);
-                                }
-
-                            }
-
-
-                        } catch (SQLException ex) {
-                            ex.printStackTrace();
                         }
+
                     }
                 }
         );
