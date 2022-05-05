@@ -1,12 +1,13 @@
 package cn.edu.guet.wzx;
 
-import cn.edu.guet.wzx.Main;
-import cn.edu.guet.wzx.Register;
+
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.sql.*;
 /*
  * Created by JFormDesigner on Sat Apr 02 15:41:52 CST 2022
@@ -43,6 +44,25 @@ public class Login extends JFrame {
         label1.setBounds(new Rectangle(new Point(75, 86), label1.getPreferredSize()));
         contentPane.add(textField1);
         textField1.setBounds(130, 85, 100, textField1.getPreferredSize().height);
+        textField1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                char keyChar=e.getKeyChar();
+
+                if(((keyChar>='0'&&keyChar<='9')||(keyChar>='a'&&keyChar<='z')||(keyChar>='A'&&keyChar<='Z'))
+                        &&textField1.getText().length()<20){
+                    return;
+                }
+                //当输入出现在限制之外时会出现提示音并且不允许输入
+                Toolkit.getDefaultToolkit().beep();
+                JOptionPane.showMessageDialog(null, "输入格式不规范，只能输入因为字母和数字","格式错误",JOptionPane.ERROR_MESSAGE);
+                //System.out.println("输入格式不规范，只能输入因为字母和数字");
+                e.consume();
+
+
+            }
+        });
 
         //---- label2 ----
         label2.setText("\u5bc6\u7801\uff1a");
@@ -50,6 +70,26 @@ public class Login extends JFrame {
         label2.setBounds(new Rectangle(new Point(80, 121), label2.getPreferredSize()));
         contentPane.add(textField2);
         textField2.setBounds(130, 120, 100, textField2.getPreferredSize().height);
+        textField2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                char keyChar=e.getKeyChar();
+                if(((keyChar>='0'&&keyChar<='9')||(keyChar>='a'&&keyChar<='z')||(keyChar>='A'&&keyChar<='Z')
+                        ||keyChar=='.'||keyChar==',')&&textField2.getText().length()<=12){
+                    return;
+
+                }
+
+                //当输入出现在限制之外时会出现提示音并且不允许输入
+                Toolkit.getDefaultToolkit().beep();
+                JOptionPane.showMessageDialog(null, "输入格式不规范，只能输入因为字母和数字和“，”“.”","格式错误",JOptionPane.ERROR_MESSAGE);
+                //System.out.println("输入格式不规范，只能输入因为字母和数字和“，”“.”");
+                e.consume();
+            }
+
+
+        });
 
         //---- radioButton1 ----
 
@@ -86,13 +126,12 @@ public class Login extends JFrame {
                     String password = textField2.getText();
 
                     String user = "root";
-                    String dbPassword = "123456";
-                    String url = "jdbc:mysql://localhost:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-
+                    String dbPassword = "LYHWYZZNSB.wan1/";
+                    String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
                     Connection conn = null;
                     // sql查询语句
-                    String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
-                    System.out.println(sql);
+                    //String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
+                    //System.out.println(sql);
                     ResultSet rs = null;//结果集：内存，存储了查询到的数据；内存区有一个游标，执行完查询的时候，不指向任何记录
                     Statement stmt = null;//语句对象，容易产生注入攻击
 
@@ -100,27 +139,36 @@ public class Login extends JFrame {
                         conn = DriverManager.getConnection(url, user, dbPassword);
 
                         stmt = conn.createStatement();
-                        rs = stmt.executeQuery(sql);
-                        if (rs.next()) {//让游标向下移动一次
 
                             /*
                             身份选择功能
                              */
-                            if(radioButton1.isSelected()){
-
+                        if(radioButton1.isSelected()){
+                            String sql = "SELECT * FROM customer WHERE name='" + username + "' AND password='" + password + "'";
+                            System.out.println(sql);
+                            rs = stmt.executeQuery(sql);
+                            if(rs.next()){
                                 Main main=new Main();
                                 main.setVisible(true);
                                 System.out.println("登陆成功");
                                 this.setVisible(false);
-                            }
-                            else if(radioButton2.isSelected()){
-                                //跳转到商家界面
-
+                            }else{
+                                JOptionPane.showMessageDialog(null, "登陆失败，用户名或密码错误","格式错误",JOptionPane.ERROR_MESSAGE);
                             }
 
+                        }
+                        else if(radioButton2.isSelected()){
+                            //跳转到商家界面
+                            String sql1 = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
+                            System.out.println(sql1);
+                            rs = stmt.executeQuery(sql1);
+                            if(rs.next()){
 
-                        } else {
-                            System.out.println("用户名或密码错误");
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null, "登陆失败，用户名或密码错误","格式错误",JOptionPane.ERROR_MESSAGE);
+                            }
+
                         }
                     } catch (SQLException ex) {
                         ex.printStackTrace();

@@ -66,6 +66,7 @@ public class Register extends JFrame {
             public void keyTyped(KeyEvent e) {
                 super.keyTyped(e);
                 char keyChar=e.getKeyChar();
+                int key=e.getKeyCode();
 
                 if(((keyChar>='0'&&keyChar<='9')||(keyChar>='a'&&keyChar<='z')||(keyChar>='A'&&keyChar<='Z'))
                         &&textField1.getText().length()<20){
@@ -73,11 +74,14 @@ public class Register extends JFrame {
                 }
                 //当输入出现在限制之外时会出现提示音并且不允许输入
                 Toolkit.getDefaultToolkit().beep();
-                System.out.println("输入格式不规范，只能输入因为字母和数字");
+                JOptionPane.showMessageDialog(null, "输入格式不规范，只能输入因为字母和数字","格式错误",JOptionPane.ERROR_MESSAGE);
+                //System.out.println("输入格式不规范，只能输入因为字母和数字");
                 e.consume();
 
 
             }
+
+
         });
 
         contentPane.add(textField2);
@@ -93,17 +97,15 @@ public class Register extends JFrame {
 
                 }
 
+
                 //当输入出现在限制之外时会出现提示音并且不允许输入
                 Toolkit.getDefaultToolkit().beep();
-                System.out.println("输入格式不规范，只能输入因为字母和数字和“，”“.”");
+                JOptionPane.showMessageDialog(null, "输入格式不规范，只能输入因为字母和数字和“，”“.”","格式错误",JOptionPane.ERROR_MESSAGE);
+                //System.out.println("输入格式不规范，只能输入因为字母和数字和“，”“.”");
                 e.consume();
             }
 
-            @Override
-            public void keyPressed(KeyEvent e){
-                String keyText = KeyEvent.getKeyText(e.getKeyCode());
 
-            }
         });
 
         contentPane.add(textField3);
@@ -118,7 +120,8 @@ public class Register extends JFrame {
                 }
                 //当输入出现在限制之外时会出现提示音并且不允许输入
                 Toolkit.getDefaultToolkit().beep();
-                System.out.println("输入格式不规范，只能输入数字");
+                JOptionPane.showMessageDialog(null, "输入格式不规范，只能输入数字","格式错误",JOptionPane.ERROR_MESSAGE);
+                //System.out.println("输入格式不规范，只能输入数字");
                 //System.out.println("输入格式不规范，只能输入数字且只允许输入8至11个数字");
                 e.consume();
             }
@@ -166,20 +169,21 @@ public class Register extends JFrame {
                                 if (username!=null&&username!=""&&!rs.next()){
                                     String sql = "INSERT INTO  customer (name,password,mobile) VALUES(?,?,?)";
                                     PreparedStatement pstmt=conn.prepareStatement(sql);
-                                    if (username != null && Password != null&&phonenumber!=null) {
-                                        pstmt.setString(1, username);
-                                        pstmt.setString(2, Password);
-                                        pstmt.setString(3, phonenumber);
-                                        pstmt.executeUpdate();//执行sql语句
-                                        System.out.println("注册成功");
 
-                                        Login login = new Login();
-                                        login.setVisible(true);
-                                        dispose();
-                                    }
+                                    pstmt.setString(1, username);
+                                    pstmt.setString(2, Password);
+                                    pstmt.setString(3, phonenumber);
+                                    pstmt.executeUpdate();//执行sql语句
+                                    System.out.println("注册成功");
+
+                                    Login login = new Login();
+                                    login.setVisible(true);
+                                    dispose();
+
                                 }
                                 else{
-                                    System.out.println("账号已存在或者账号不符合规则");
+                                    JOptionPane.showMessageDialog(null, "账号已存在或者账号和密码不符合规则","格式错误",JOptionPane.ERROR_MESSAGE);
+                                    //System.out.println("账号已存在或者账号不符合规则");
                                 }
 
                             }
@@ -190,21 +194,21 @@ public class Register extends JFrame {
                                 if (username!=null&&username!=""&&!rs.next()) {
                                     String sql = "INSERT INTO  sys_user (name,password,mobile) VALUES(?,?,?)";
                                     PreparedStatement pstmt = conn.prepareStatement(sql);
-                                    if (username != null && Password != null) {
-                                        pstmt.setString(1, username);
-                                        pstmt.setString(2, Password);
-                                        pstmt.setString(3, phonenumber);
-                                        pstmt.executeUpdate();//执行sql语句
-                                        System.out.println("注册成功");
 
-                                        Login login = new Login();
-                                        login.setVisible(true);
-                                        dispose();
-                                    }
+                                    pstmt.setString(1, username);
+                                    pstmt.setString(2, Password);
+                                    pstmt.setString(3, phonenumber);
+                                    pstmt.executeUpdate();//执行sql语句
+                                    System.out.println("注册成功");
+
+                                    Login login = new Login();
+                                    login.setVisible(true);
+                                    dispose();
+
 
                                 }
                                 else{
-                                    System.out.println("账号已存在或者账号不符合规则");
+                                    JOptionPane.showMessageDialog(null, "账号已存在或者账号和密码不符合规则","格式错误",JOptionPane.ERROR_MESSAGE);
                                 }
 
                             }
