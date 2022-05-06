@@ -1,6 +1,5 @@
 package cn.edu.guet.zt.statistics.dao.impl;
 
-import cn.edu.guet.hld.util.ConnectionHander;
 import cn.edu.guet.zt.statistics.bean.OrderInfo;
 import cn.edu.guet.zt.statistics.bean.SalesVolume;
 import cn.edu.guet.zt.statistics.dao.DailySalesDao;
@@ -19,7 +18,7 @@ public class DailySalesDaoImpl implements DailySalesDao {
         Statement stmt = null;
         PreparedStatement pstmt = null;
         try {
-            conn  = ConnectionHander.getConnection();
+            conn = SalesConnectionHandler.getConnection();
 
             stmt = conn.createStatement();
             String nowDate = date.toString();
