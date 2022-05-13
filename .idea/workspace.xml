@@ -4,13 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="完成了日销售额跟随订单变化而变化的功能">
+    <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="完成了月销售额跟随订单变化而变化的功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/2AX3JWnA9n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/ALXjB1AlX0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-J.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-T.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/juntai/wxpaydemo/util/ConnectionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/MonthlySalesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/MonthlySalesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/DailySalesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/DailySalesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/MonthlySalesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/MonthlySalesDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-D.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/ConnectionHander.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetDailySales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetDailySales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetMonthlySales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetMonthlySales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tea_picture/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tea_img/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/guet/zt/GetTotalSalesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/guet/zt/GetTotalSalesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/SelectInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/SelectInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Base.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/DailySalesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/DailySalesDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/MonthlySalesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/MonthlySalesDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/SalesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/SalesDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/DailySalesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/DailySalesDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/MonthlySalesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/MonthlySalesDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetDailySales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetDailySales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthlySales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthlySales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Register$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Register.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tea_picture/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/guet/zt/GetTotalSalesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/edu/guet/zt/GetTotalSalesTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,19 +99,19 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="zt" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetTable.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/ResetTable.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/SalesConnectionHandler.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/bean/SalesVolume.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/StatisticsGUI.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/SalesDao.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/ResetTable.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/bean/SalesVolume.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -90,7 +135,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java/TeaShop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/tea_picture" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -98,14 +143,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\java\NewTeaBrewing\src\main\resources\tea_picture" />
-      <recent name="C:\Users\86188\Desktop\NewTeaBrewing\NewTeaBrewing\src\main\java\cn\edu\guet\hld\jpg" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_picture" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\util" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\MilkeTeaServer" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\MilkeTeaServer\Impl" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\MilkeTeaDao" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_img" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_picture" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\bean" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.edu.guet.hld.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GetTotalSalesTest.test1">
+  <component name="RunManager" selected="Application.StatisticsGUI">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -132,12 +185,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Register" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.wzx.Register" />
+    <configuration name="SelectInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hld.util.SelectInterface" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.wzx.*" />
+          <option name="PATTERN" value="cn.edu.guet.hld.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,12 +198,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hld.util.SelectInterface" />
+    <configuration name="StatisticsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.zt.statistics.StatisticsGUI" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.hld.util.*" />
+          <option name="PATTERN" value="cn.edu.guet.zt.statistics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,11 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GetTotalSalesTest.test1" />
-        <item itemvalue="JUnit.GetTotalSalesTest.test" />
-        <item itemvalue="Application.Register" />
+        <item itemvalue="Application.StatisticsGUI" />
         <item itemvalue="Application.SelectInterface" />
         <item itemvalue="Application.Login" />
+        <item itemvalue="JUnit.GetTotalSalesTest.test1" />
+        <item itemvalue="JUnit.GetTotalSalesTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +273,9 @@
       <workItem from="1651581962686" duration="2797000" />
       <workItem from="1651671758892" duration="3067000" />
       <workItem from="1651756782948" duration="5794000" />
-      <workItem from="1651804215808" duration="1010000" />
+      <workItem from="1651804215808" duration="1210000" />
+      <workItem from="1651919471132" duration="490000" />
+      <workItem from="1652424126037" duration="5891000" />
     </task>
     <task id="LOCAL-00001" summary="hdl">
       <created>1651302256860</created>
@@ -264,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651766568503</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="完成了月销售额跟随订单变化而变化的功能">
+      <created>1651805332434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651805332434</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +350,8 @@
     <MESSAGE value="修改了图片引入的位置、数据库的密码和IP地址" />
     <MESSAGE value="删除了商家的注册选项&#10;给账号和密码的设定增加了限制" />
     <MESSAGE value="完成了日销售额跟随订单变化而变化的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了日销售额跟随订单变化而变化的功能" />
+    <MESSAGE value="完成了月销售额跟随订单变化而变化的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了月销售额跟随订单变化而变化的功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

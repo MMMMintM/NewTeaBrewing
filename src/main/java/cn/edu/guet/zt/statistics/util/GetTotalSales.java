@@ -1,5 +1,7 @@
 package cn.edu.guet.zt.statistics.util;
 
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +18,7 @@ public class GetTotalSales {
         String sales = null;
         String sql = "SELECT SUM(total_sales) FROM sales_volume;";
         try {
-            conn = SalesConnectionHandler.getConnection();
+            conn = ConnectionHandler.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while(rs.next()){

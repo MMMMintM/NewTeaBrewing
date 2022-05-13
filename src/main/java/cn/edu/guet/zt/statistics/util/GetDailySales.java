@@ -1,5 +1,7 @@
 package cn.edu.guet.zt.statistics.util;
 
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
+
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,9 +20,9 @@ public class GetDailySales {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(System.currentTimeMillis());
 
-        String sql = "SELECT sales FROM daily_sales WHERE day = ?;";
+        String sql = "SELECT ifnull(sales,0) FROM daily_sales WHERE day = ?;";
         try {
-            conn = SalesConnectionHandler.getConnection();
+            conn = ConnectionHandler.getConnection();
 
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1,simpleDateFormat.format(date));

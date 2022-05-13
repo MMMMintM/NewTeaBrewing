@@ -2,6 +2,8 @@ package cn.edu.guet.wzx;
 
 
 
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -25,10 +27,10 @@ public class Login extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
-        textField1 = new JTextField("guet");
+        textField1 = new JTextField();
         label2 = new JLabel();
         label3 = new JLabel();
-        textField2 = new JTextField("guet1234");
+        textField2 = new JTextField();
         button1 = new JButton();
         button2 = new JButton();
         radioButton1 = new JRadioButton();
@@ -124,10 +126,6 @@ public class Login extends JFrame {
                      */
                     String username = textField1.getText();
                     String password = textField2.getText();
-
-                    String user = "root";
-                    String dbPassword = "LYHWYZZNSB.wan1/";
-                    String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
                     Connection conn = null;
                     // sql查询语句
                     //String sql = "SELECT * FROM sys_user WHERE name='" + username + "' AND password='" + password + "'";
@@ -136,7 +134,7 @@ public class Login extends JFrame {
                     Statement stmt = null;//语句对象，容易产生注入攻击
 
                     try {
-                        conn = DriverManager.getConnection(url, user, dbPassword);
+                        conn = ConnectionHandler.getConnection();
 
                         stmt = conn.createStatement();
 

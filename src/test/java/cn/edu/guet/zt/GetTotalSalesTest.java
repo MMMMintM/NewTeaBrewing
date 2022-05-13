@@ -12,10 +12,9 @@ public class GetTotalSalesTest {
     }
 
     @Test
-    public void test(){
-        String rs;
-        rs = GetTotalSales.getSales();
-        System.out.println(rs);
+    public void test1(){
+        String str = "2021-01-22";
+        System.out.println(str.substring(0, 7));
     }
 
     @After

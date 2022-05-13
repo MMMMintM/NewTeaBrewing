@@ -4,6 +4,8 @@
 
 package cn.edu.guet.hld.util;
 
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
+
 import java.awt.*;
 import java.sql.SQLException;
 import javax.swing.*;
@@ -34,9 +36,9 @@ public class GetCommit extends JFrame {
         //---- button1 ----
         button1.setText("Yes");
         button1.addActionListener(e -> {
-            ConnectionHander connectionHander = new ConnectionHander();
+            ConnectionHandler connectionHandler = new ConnectionHandler();
             try {
-                connectionHander.getConnection().commit();
+                connectionHandler.getConnection().commit();
                 Succeed succeed = new Succeed();
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 this.setVisible(false);
@@ -50,12 +52,12 @@ public class GetCommit extends JFrame {
         //---- button2 ----
         button2.setText(" No ");
         button2.addActionListener(e -> {
-            ConnectionHander connectionHander = new ConnectionHander();
+            ConnectionHandler connectionHandler = new ConnectionHandler();
             Succeed succeed = new Succeed();
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             this.setVisible(false);
             try {
-                connectionHander.getConnection().rollback();
+                connectionHandler.getConnection().rollback();
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }

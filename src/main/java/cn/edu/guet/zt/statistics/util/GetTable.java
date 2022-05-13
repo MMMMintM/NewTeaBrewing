@@ -1,6 +1,7 @@
 package cn.edu.guet.zt.statistics.util;
 
 import cn.edu.guet.zt.statistics.bean.SalesVolume;
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -20,7 +21,7 @@ public class GetTable {
         ResultSet rs = null;
 
         try {
-            conn = SalesConnectionHandler.getConnection();
+            conn = ConnectionHandler.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while(rs.next()){

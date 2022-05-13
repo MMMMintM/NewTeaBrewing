@@ -1,4 +1,6 @@
 package cn.edu.guet.wzx;
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
+
 import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
@@ -111,14 +113,11 @@ public class Main extends JFrame {
 
         java.util.List<Item> list = new ArrayList<Item>();
         Connection conn = null;
-        String user = "root";
-        String dbPassword = "LYHWYZZNSB.wan1/";
-        String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
         Statement stmt = null;
         String sql = "SELECT * FROM item";
         ResultSet rs = null;
         try {
-            conn = DriverManager.getConnection(url, user, dbPassword);
+            conn = ConnectionHandler.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {

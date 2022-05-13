@@ -70,11 +70,11 @@ public class SelectInterface extends JFrame {
                     int i = 0;
                     ResultSet resultSet = null;
                     MilkeTeaServer milkeTeaServer = new MilkeTeaServerImpl();
-
                     try {
                         resultSet = milkeTeaServer.ServerSelect(milkeTea);
 
-                        int h = 0;
+                        int flag = 0;
+                        int m = 0;
                         System.out.println(resultSet.getFetchSize());
                         while (resultSet.next()) {
                             int id = resultSet.getInt(1);
@@ -85,16 +85,21 @@ public class SelectInterface extends JFrame {
                             String img_url = resultSet.getString(6);
                             button[i] = new JButton();
                             button[i].setText("<html>" +
-                                    id + "<br>" +
-                                    "<div style=\"text-align:center;\">" + title + "<br>" + price + "/杯</div></html>");
+                                    "<div style=\"text-align:center;\">" + id +
+                                    "<br>" + title +
+                                    "<br>" + price + "/杯" +
+                                    "<br>" +"还有"+ sales + "杯</div></html>");
                             panel2.add(button[i]);
-
-                            if (i % 2 == 0) {
-                                button[i].setBounds(45, (35 + h * 125), 155, 85);
-                            } else {
-
-                                button[i].setBounds(230, (35 + h * 125), 155, 85);
-                                h++;
+                            if (flag == 0) {
+                                button[i].setBounds(25, (35 + m * 100), 115, 70);
+                                flag = 1;
+                            } else if (flag == 1) {
+                                button[i].setBounds(150, (35 + m * 100), 115, 70);
+                                flag = 2;
+                            } else if (flag == 2) {
+                                button[i].setBounds(275, (35 + m * 100), 115, 70);
+                                flag = 0;
+                                m++;
                             }
 
                             button[i].addActionListener(l -> {
@@ -129,11 +134,13 @@ public class SelectInterface extends JFrame {
                                 button5 = new JButton();
                                 button5.setDefaultCapable(true);
                                 button5.setText("<html>" +
-                                        id + "<br>" +
-                                        "<div style=\"text-align:center;\">" + title + "<br>" + price + "/杯</div></html>");
+                                        "<div style=\"text-align:center;\">" + id +
+                                        "<br>" + title +
+                                        "<br>" + price + "/杯" +
+                                        "<br>"+"还有" + sales + "杯</div></html>");
                                 panel2.add(button5);
-                                button5.setBounds(45, 35, 155, 85);
-
+                                button5.setBounds(25, 35, 120, 70);
+                                System.out.println("第一次");
                                 button5.addActionListener(h -> {
                                     Picture picture = new Picture(img_url);
                                     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -147,17 +154,20 @@ public class SelectInterface extends JFrame {
                                 button6.setDefaultCapable(true);
                                 System.out.println(isFirst);
                                 button6.setText("<html>" +
-                                        id + "<br>" +
-                                        "<div style=\"text-align:center;\">" + title + "<br>" + price + "/杯</div></html>");
+                                        "<div style=\"text-align:center;\">" + id +
+                                        "<br>" + title +
+                                        "<br>" + price + "/杯" +
+                                        "<br>" +"还有"+ sales + "杯</div></html>");
                                 panel2.add(button6);
-                                button6.setBounds(45, 35, 155, 85);
+                                System.out.println("第二次");
+                                button6.setBounds(25, 35, 120, 70);
                                 button6.addActionListener(h -> {
                                     Picture picture = new Picture(img_url);
                                     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                                     panel2.updateUI();
                                     panel2.repaint();
-                                    isFirst = 0;
                                 });
+                                isFirst = 0;
                             }
                         }
                     } catch (SQLException throwables) {
@@ -172,8 +182,6 @@ public class SelectInterface extends JFrame {
                             throwables.printStackTrace();
                         }
                     }
-
-
                 } else if (textField1.getText().equals("")) {
 
                     String title = textField2.getText();
@@ -194,10 +202,12 @@ public class SelectInterface extends JFrame {
                                 button5 = new JButton();
                                 button5.setDefaultCapable(true);
                                 button5.setText("<html>" +
-                                        id + "<br>" +
-                                        "<div style=\"text-align:center;\">" + title + "<br>" + price + "/杯</div></html>");
+                                        "<div style=\"text-align:center;\">" + id +
+                                        "<br>" + title +
+                                        "<br>" + price + "/杯" +
+                                        "<br>" +"还有"+ sales + "杯</div></html>");
                                 panel2.add(button5);
-                                button5.setBounds(45, 35, 155, 85);
+                                button5.setBounds(25, 35, 120, 70);
 
                                 button5.addActionListener(h -> {
                                     Picture picture = new Picture(img_url);
@@ -212,8 +222,10 @@ public class SelectInterface extends JFrame {
                                 button6.setDefaultCapable(true);
                                 System.out.println(isFirst);
                                 button6.setText("<html>" +
-                                        id + "<br>" +
-                                        "<div style=\"text-align:center;\">" + title + "<br>" + price + "/杯</div></html>");
+                                        "<div style=\"text-align:center;\">" + id +
+                                        "<br>" + title +
+                                        "<br>" + price + "/杯" +
+                                        "<br>" +"还有"+ sales + "杯</div></html>");
                                 panel2.add(button6);
                                 button6.setBounds(45, 35, 155, 85);
                                 button6.addActionListener(h -> {
@@ -250,13 +262,14 @@ public class SelectInterface extends JFrame {
                                 button5 = new JButton();
                                 button5.setDefaultCapable(true);
                                 button5.setText("<html>" +
-                                        id + "<br>" +
-                                        "<div style=\"text-align:center;\">" + title + "<br>" + price + "/杯</div></html>");
+                                        "<div style=\"text-align:center;\">" + id +
+                                        "<br>" + title +
+                                        "<br>" + price + "/杯" +
+                                        "<br>" +"还有"+ sales + "杯</div></html>");
                                 panel2.add(button5);
-                                button5.setBounds(45, 35, 155, 85);
+                                button5.setBounds(25, 35, 120, 70);
                                 button5.addActionListener(h -> {
                                     Picture picture = new Picture(img_url);
-                                    //System.out.println(img_url);
                                     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                                 });
                                 panel2.updateUI();
@@ -267,22 +280,20 @@ public class SelectInterface extends JFrame {
                                 button6 = new JButton();
                                 button6.setDefaultCapable(true);
                                 button6.setText("<html>" +
-                                        id + "<br>" +
-                                        "<div style=\"text-align:center;\">" + title + "<br>" + price + "/杯</div></html>");
+                                        "<div style=\"text-align:center;\">" + id +
+                                        "<br>" + title +
+                                        "<br>" + price + "/杯" +
+                                        "<br>" + sales + "</div></html>");
                                 panel2.add(button6);
-                                button6.setBounds(45, 35, 155, 85);
+                                button6.setBounds(25, 35, 120, 70);
                                 button6.addActionListener(h -> {
                                     Picture picture = new Picture(img_url);
-
-                                    //System.out.println(img_url);
                                     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                                     panel2.updateUI();
                                     panel2.repaint();
                                     isFirst = 0;
                                 });
                             }
-
-
                         }
                     } catch (SQLException throwables) {
                         throwables.printStackTrace();
@@ -374,8 +385,8 @@ public class SelectInterface extends JFrame {
         jSplitPane.setBackground(Color.CYAN);
         contentPane.add(jSplitPane);
         contentPane.add(panel1);
-        String rpicture = "src/main/java/cn/edu/guet/hld/jpg/R-C.jpg";
-        String rpicture2 = "src/main/java/cn/edu/guet/hld/jpg/R-D.jpg";
+        String rpicture = "src/main/java/cn/edu/guet/hld/jpg/2AX3JWnA9n.jpg";
+        String rpicture2 = "src/main/java/cn/edu/guet/hld/jpg/ALXjB1AlX0.jpg";
         JLabel path_p = new JLabel(new ImageIcon(rpicture));
         JLabel path_q = new JLabel(new ImageIcon(rpicture2));
         path_q.setBounds(0, 0, 230, 600);

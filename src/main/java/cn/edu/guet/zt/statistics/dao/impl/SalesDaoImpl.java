@@ -1,10 +1,9 @@
 package cn.edu.guet.zt.statistics.dao.impl;
 
 import cn.edu.guet.hld.bean.MilkeTea;
-import cn.edu.guet.hld.util.ConnectionHander;
 import cn.edu.guet.zt.statistics.bean.OrderInfo;
-import cn.edu.guet.zt.statistics.bean.SalesVolume;
 import cn.edu.guet.zt.statistics.dao.SalesDao;
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,7 +18,7 @@ public class SalesDaoImpl implements SalesDao {
         Connection conn = null;
 
         try {
-            conn  = ConnectionHander.getConnection();
+            conn  = ConnectionHandler.getConnection();
 
             String sql = "INSERT INTO sales_volume VALUES (?,?,0,0,CURDATE())";
 
@@ -45,7 +44,7 @@ public class SalesDaoImpl implements SalesDao {
         Connection conn = null;
 
         try {
-            conn  = ConnectionHander.getConnection();
+            conn  = ConnectionHandler.getConnection();
 
             String sql = "DELETE FROM sales_volume WHERE id = ?";
 
@@ -69,7 +68,7 @@ public class SalesDaoImpl implements SalesDao {
         Connection conn = null;
 
         try {
-            conn  = ConnectionHander.getConnection();
+            conn  = ConnectionHandler.getConnection();
 
             String sql = "UPDATE item SET id = ?,title = ? WHERE name = ?;";
             String foreignKeySql = "SET foreign_key_checks = 1;";
@@ -100,7 +99,7 @@ public class SalesDaoImpl implements SalesDao {
         Connection conn = null;
 
         try {
-            conn  = ConnectionHander.getConnection();
+            conn  = ConnectionHandler.getConnection();
 
 
 

@@ -2,6 +2,8 @@
  * Created by JFormDesigner on Thu Apr 28 22:38:18 CST 2022
  */
 package cn.edu.guet.wzx;
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -134,9 +136,6 @@ public class Register extends JFrame {
                         String username = textField1.getText();
                         String Password = textField2.getText();
                         String phonenumber = textField2.getText();
-                        String user = "root";
-                        String dbPassword = "LYHWYZZNSB.wan1/";
-                        String url = "jdbc:mysql://123.57.42.220:3306/teashop?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
                         Connection conn = null;
                         // 拼sql，容易有注入攻击
 
@@ -148,7 +147,7 @@ public class Register extends JFrame {
                             JOptionPane.showMessageDialog(null, "账号已存在或者账号和密码不符合规则","格式错误",JOptionPane.ERROR_MESSAGE);
                         } else{
                             try {
-                                conn=DriverManager.getConnection(url,user,dbPassword);
+                                conn= ConnectionHandler.getConnection();
                                 Statement stmt = conn.createStatement();
 
                                     String check1="SELECT * FROM customer WHERE name='"+username+"'";

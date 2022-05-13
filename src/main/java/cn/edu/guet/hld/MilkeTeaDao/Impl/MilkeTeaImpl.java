@@ -2,8 +2,8 @@ package cn.edu.guet.hld.MilkeTeaDao.Impl;
 
 import cn.edu.guet.hld.MilkeTeaDao.MilkeTeaDao;
 import cn.edu.guet.hld.bean.MilkeTea;
-import cn.edu.guet.hld.util.ConnectionHander;
 import cn.edu.guet.hld.util.GetCommit;
+import cn.juntai.wxpaydemo.util.ConnectionHandler;
 
 import javax.swing.*;
 import java.sql.*;
@@ -21,28 +21,28 @@ public class MilkeTeaImpl implements MilkeTeaDao {
         if(String.valueOf(milkeTea.getId()).equals("0")&&milkeTea.getTitle()==null){
             String sql = "select * from item";
 
-            Connection connection = ConnectionHander.getConnection();
+            Connection connection = ConnectionHandler.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
         }else if (String.valueOf(milkeTea.getId()).equals("0")) {
 
             String sql = "select * from item where title=?";
 
-            Connection connection = ConnectionHander.getConnection();
+            Connection connection = ConnectionHandler.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, milkeTea.getTitle());
             resultSet = preparedStatement.executeQuery();
 
         }else if(milkeTea.getTitle()==null){
             String sql="select * from item where id=?";
-            Connection connection = ConnectionHander.getConnection();
+            Connection connection = ConnectionHandler.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, milkeTea.getId());
             resultSet = preparedStatement.executeQuery();
         } else{
             String sql = "select * from item where id=? AND title=?";
 
-            Connection connection = ConnectionHander.getConnection();
+            Connection connection = ConnectionHandler.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1,milkeTea.getId());
             preparedStatement.setString(2, milkeTea.getTitle());
@@ -57,7 +57,7 @@ public class MilkeTeaImpl implements MilkeTeaDao {
         ResultSet resultSet = null;
 
         String sql = "select * from item";
-        Connection connection = ConnectionHander.getConnection();
+        Connection connection = ConnectionHandler.getConnection();
 
         preparedStatement = connection.prepareStatement(sql);
         resultSet = preparedStatement.executeQuery();
@@ -71,7 +71,7 @@ public class MilkeTeaImpl implements MilkeTeaDao {
         PreparedStatement preparedStatement = null;
         String sql = "insert into item values(?,?,?,?,?,?)";
         int count = 0;
-        Connection connection = ConnectionHander.getConnection();
+        Connection connection = ConnectionHandler.getConnection();
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1, milkeTea.getId());
         preparedStatement.setString(2, milkeTea.getTitle());
@@ -90,7 +90,7 @@ public class MilkeTeaImpl implements MilkeTeaDao {
     @Override
     public String Delete(String name) throws SQLException, ClassNotFoundException {
         String sql = "delete from item where title=?";
-        Connection connection = ConnectionHander.getConnection();
+        Connection connection = ConnectionHandler.getConnection();
         PreparedStatement preparedStatement = null;
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, name);
@@ -103,7 +103,7 @@ public class MilkeTeaImpl implements MilkeTeaDao {
     @Override
     public String UnDate(MilkeTea milkeTea, String name) throws SQLException, ClassNotFoundException {
         String sql = "update item set id=?,title=?,price=?,description=?,sales=?,img_url=? where title=?";
-        Connection connection = ConnectionHander.getConnection();
+        Connection connection = ConnectionHandler.getConnection();
         PreparedStatement preparedStatement = null;
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement = connection.prepareStatement(sql);

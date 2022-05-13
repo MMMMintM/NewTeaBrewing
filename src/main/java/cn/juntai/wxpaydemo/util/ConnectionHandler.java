@@ -1,10 +1,10 @@
-package cn.edu.guet.hld.util;
+package cn.juntai.wxpaydemo.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionHander {
+public class ConnectionHandler {
     private static ThreadLocal<Connection> threadLocal = new ThreadLocal<>();
 
 
@@ -38,6 +38,5 @@ public class ConnectionHander {
         }
         threadLocal.remove();
     }
-
 
 }
