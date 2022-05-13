@@ -1,6 +1,7 @@
 package cn.edu.guet.hzr.bean;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class NewOrderInfo {
 
@@ -104,4 +105,33 @@ public class NewOrderInfo {
         this.orderPrice = orderPrice;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof NewOrderInfo)) return false;
+        NewOrderInfo that = (NewOrderInfo) o;
+        return getCustomerID() == that.getCustomerID() && getMchID() == that.getMchID() && getUserID() == that.getUserID() && getItemID() == that.getItemID() && Float.compare(that.getItemPrice(), getItemPrice()) == 0 && getAmount() == that.getAmount() && Float.compare(that.getOrderPrice(), getOrderPrice()) == 0 && Objects.equals(getID(), that.getID()) && Objects.equals(getOutTradeNo(), that.getOutTradeNo()) && Objects.equals(getOrderTime(), that.getOrderTime()) && Objects.equals(getTransactionID(), that.getTransactionID());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getID(), getCustomerID(), getMchID(), getOutTradeNo(), getOrderTime(), getTransactionID(), getUserID(), getItemID(), getItemPrice(), getAmount(), getOrderPrice());
+    }
+
+    @Override
+    public String toString() {
+        return "NewOrderInfo{" +
+                "ID='" + ID + '\'' +
+                ", customerID=" + customerID +
+                ", mchID=" + mchID +
+                ", outTradeNo='" + outTradeNo + '\'' +
+                ", orderTime=" + orderTime +
+                ", transactionID='" + transactionID + '\'' +
+                ", userID=" + userID +
+                ", itemID=" + itemID +
+                ", itemPrice=" + itemPrice +
+                ", amount=" + amount +
+                ", orderPrice=" + orderPrice +
+                '}';
+    }
 }

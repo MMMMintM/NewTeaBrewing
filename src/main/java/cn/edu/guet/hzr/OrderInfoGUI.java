@@ -44,6 +44,8 @@ public class OrderInfoGUI extends JFrame {
             }
         };
 
+        table1.setModel(tableModel);
+
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
