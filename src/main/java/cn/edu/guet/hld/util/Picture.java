@@ -28,36 +28,12 @@ public class Picture extends JFrame {
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
-        BufferedInputStream bis = null;
-        contentPane.setPreferredSize(new Dimension(400, 300));
+        //BufferedInputStream bis = null;
+        contentPane.setPreferredSize(new Dimension(370, 370));
         pack();
         setLocationRelativeTo(getOwner());
-        ByteArrayOutputStream baos = null;
-        try {
-            URL url1 = new URL(url);
-            bis = new BufferedInputStream(url1.openStream());
-            baos = new ByteArrayOutputStream();
-            int i = 0;
-            while ((i = bis.read()) != -1) {
-                baos.write(i);
-            }
-
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                bis.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-        JLabel path_q = new JLabel(new ImageIcon(baos.toByteArray()));
-        path_q.setBounds(100, 50, 200, 200);
+        JLabel path_q = new JLabel(new ImageIcon(url));
+        path_q.setBounds(0, 0, 370, 370);
         this.add(path_q, new byte[1024]);
         this.setVisible(true);
         this.setResizable(false);

@@ -7,8 +7,13 @@ package cn.edu.guet.hld.util;
 import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
 import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
 import cn.edu.guet.hld.bean.MilkeTea;
+import cn.edu.guet.wzx.Login;
+import cn.edu.guet.zt.manager.ManagerGUI;
+import org.apache.catalina.Manager;
 
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.*;
@@ -398,7 +403,16 @@ public class SelectInterface extends JFrame {
         contentPane.add(panel2);
         this.setVisible(true);
         this.setResizable(false);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                ManagerGUI managerGUI = new ManagerGUI();
+                managerGUI.setVisible(true);
+                dispose();
+            }
+        });
 
     }
 

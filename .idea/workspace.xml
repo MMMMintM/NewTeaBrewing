@@ -5,45 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="完成了月销售额跟随订单变化而变化的功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/2AX3JWnA9n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/ALXjB1AlX0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-J.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-T.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/juntai/wxpaydemo/util/ConnectionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tea_img/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/PayGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/TestGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/bean/MilkeTeaAndNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/util/MilkeTeaData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hzr/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hzr/OrderInfoGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hzr/UpdateOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hzr/bean/NewOrderInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hzr/util/GetOrderInfoTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/manager/ManagerGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/manager/bean/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/manager/util/GetItemTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-C.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/jpg/R-D.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/ConnectionHander.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/GetCommit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/Picture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hld/util/SelectInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetDailySales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetDailySales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetMonthlySales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/util/GetMonthlySales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tea_picture/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tea_img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/guet/zt/GetTotalSalesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/guet/zt/GetTotalSalesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/StatisticsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/zt/statistics/StatisticsGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Picture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/Picture.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/SelectInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/SelectInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Base.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/wzx/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/StatisticsGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/StatisticsGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/DailySalesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/DailySalesDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/MonthlySalesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/MonthlySalesDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/SalesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/SalesDao.class" afterDir="false" />
@@ -51,10 +40,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/MonthlySalesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/MonthlySalesDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/dao/impl/SalesDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetDailySales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetDailySales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetDayTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetDayTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthlySales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthlySales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTotalSales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTotalSales.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Register$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Register.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tea_picture/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/guet/zt/GetTotalSalesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/edu/guet/zt/GetTotalSalesTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +127,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/tea_picture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/edu/guet/hzr" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -143,22 +135,24 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hzr" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy\bean" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy\util" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_picture" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\util" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\MilkeTeaServer" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\MilkeTeaServer\Impl" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\MilkeTeaDao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\util" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_img" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_picture" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\bean" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.edu.guet.hzr.util" />
       <recent name="cn.edu.guet.hld.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StatisticsGUI">
+  <component name="RunManager" selected="Application.OrderInfoGUI">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -172,12 +166,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.wzx.Login" />
+    <configuration name="Order" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.zt.statistics.dao.Order" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.wzx.*" />
+          <option name="PATTERN" value="cn.edu.guet.zt.statistics.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,12 +179,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hld.util.SelectInterface" />
+    <configuration name="OrderInfoGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hzr.OrderInfoGUI" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.hld.util.*" />
+          <option name="PATTERN" value="cn.edu.guet.hzr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,45 +205,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetTotalSalesTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hhy.TestGUI" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.zt.*" />
+          <option name="PATTERN" value="cn.edu.guet.hhy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.edu.guet.zt" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.zt.GetTotalSalesTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetTotalSalesTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="list" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hhy.list" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.zt.*" />
+          <option name="PATTERN" value="cn.edu.guet.hhy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.edu.guet.zt" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.zt.GetTotalSalesTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderInfoGUI" />
+        <item itemvalue="Application.Order" />
         <item itemvalue="Application.StatisticsGUI" />
-        <item itemvalue="Application.SelectInterface" />
-        <item itemvalue="Application.Login" />
-        <item itemvalue="JUnit.GetTotalSalesTest.test1" />
-        <item itemvalue="JUnit.GetTotalSalesTest.test" />
+        <item itemvalue="Application.TestGUI" />
+        <item itemvalue="Application.list" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +263,10 @@
       <workItem from="1651756782948" duration="5794000" />
       <workItem from="1651804215808" duration="1210000" />
       <workItem from="1651919471132" duration="490000" />
-      <workItem from="1652424126037" duration="5891000" />
+      <workItem from="1652424126037" duration="6659000" />
+      <workItem from="1652431838335" duration="295000" />
+      <workItem from="1652433888389" duration="60000" />
+      <workItem from="1652436597635" duration="18567000" />
     </task>
     <task id="LOCAL-00001" summary="hdl">
       <created>1651302256860</created>
@@ -326,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651805332434</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="完成了月销售额跟随订单变化而变化的功能">
+      <created>1652431250829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652431250829</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

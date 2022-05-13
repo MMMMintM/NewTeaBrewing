@@ -2,6 +2,7 @@ package cn.edu.guet.wzx;
 
 
 
+import cn.edu.guet.zt.manager.ManagerGUI;
 import cn.juntai.wxpaydemo.util.ConnectionHandler;
 
 import javax.swing.*;
@@ -61,8 +62,6 @@ public class Login extends JFrame {
                 JOptionPane.showMessageDialog(null, "输入格式不规范，只能输入因为字母和数字","格式错误",JOptionPane.ERROR_MESSAGE);
                 //System.out.println("输入格式不规范，只能输入因为字母和数字");
                 e.consume();
-
-
             }
         });
 
@@ -161,6 +160,10 @@ public class Login extends JFrame {
                             System.out.println(sql1);
                             rs = stmt.executeQuery(sql1);
                             if(rs.next()){
+                                ManagerGUI managerGUI = new ManagerGUI();
+                                managerGUI.setVisible(true);
+                                System.out.println("登陆成功");
+                                this.setVisible(false);
 
                             }
                             else{

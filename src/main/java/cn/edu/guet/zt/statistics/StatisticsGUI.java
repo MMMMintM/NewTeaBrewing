@@ -7,9 +7,12 @@ package cn.edu.guet.zt.statistics;
 import cn.edu.guet.hld.MilkeTeaServer.Impl.MilkeTeaServerImpl;
 import cn.edu.guet.hld.MilkeTeaServer.MilkeTeaServer;
 import cn.edu.guet.hld.bean.MilkeTea;
+import cn.edu.guet.zt.manager.ManagerGUI;
 import cn.edu.guet.zt.statistics.util.*;
 
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
@@ -179,9 +182,18 @@ public class StatisticsGUI extends JFrame {
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setResizable(false);
         this.setVisible(true);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                ManagerGUI managerGUI = new ManagerGUI();
+                managerGUI.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
