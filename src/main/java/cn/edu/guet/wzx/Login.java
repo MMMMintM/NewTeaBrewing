@@ -25,6 +25,10 @@ public class Login extends JFrame {
         initComponents();
     }
 
+    public int getid(){
+        return this.id;
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
@@ -215,6 +219,7 @@ public class Login extends JFrame {
     private JButton button2;
     private JRadioButton radioButton1;
     private JRadioButton radioButton2;
+    private int id;
 
 
     public static void main(String[] args) {

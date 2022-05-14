@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b249fdc9-9c86-4a94-b83e-51eeb854c591" name="Default Changelist" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/sjl/bean/MS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/sjl/main/iface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/sjl/util/ConnectionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/sjl/util/GETDATA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/sjl/util/ResetTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/PayGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/PayGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/juntai/wxpaydemo/pay/WXPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/juntai/wxpaydemo/pay/WXPay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/wzx/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" afterDir="false" />
@@ -128,17 +132,18 @@
       <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy\util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\sjl\bean" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\sjl\main" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\sjl\util" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\util" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_img" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_picture" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\bean" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.edu.guet.hzr.util" />
       <recent name="cn.edu.guet.hld.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.list">
+  <component name="RunManager" selected="Application.iface">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -154,19 +159,6 @@
     </configuration>
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.edu.guet.wzx.Login" />
-      <module name="NewTeaBrewing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.guet.wzx.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.wzx.Main" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
@@ -204,6 +196,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="iface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.sjl.main.iface" />
+      <module name="NewTeaBrewing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.guet.sjl.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="list" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hhy.list" />
       <module name="NewTeaBrewing" />
@@ -219,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.iface" />
+        <item itemvalue="Application.Login" />
         <item itemvalue="Application.list" />
         <item itemvalue="Application.PayGUI" />
         <item itemvalue="Application.ManagerGUI" />
-        <item itemvalue="Application.Login" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +260,8 @@
       <workItem from="1652436597635" duration="18923000" />
       <workItem from="1652457869437" duration="1264000" />
       <workItem from="1652502470941" duration="2077000" />
-      <workItem from="1652505426409" duration="1359000" />
+      <workItem from="1652505426409" duration="1559000" />
+      <workItem from="1652507797381" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="hdl">
       <created>1651302256860</created>
@@ -334,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652505156550</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1">
+      <created>1652506946805</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652506946805</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
