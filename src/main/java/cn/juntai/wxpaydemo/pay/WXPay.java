@@ -13,12 +13,11 @@ import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.math.BigDecimal;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.SortedMap;
-import java.util.TreeMap;
+import java.text.DecimalFormat;
+import java.util.*;
 
 public class WXPay {
 
@@ -30,9 +29,9 @@ public class WXPay {
     public static void main(String[] args) throws Exception {
 
         // 生成二维码，完成支付
-        // unifiedOrder();
+//         unifiedOrder();
         // 商家扫用户手机的条形码
-        scanCodeToPay("");
+//        scanCodeToPay("");
 
     }
 
@@ -131,11 +130,9 @@ public class WXPay {
         return "";
     }
 
-    /*
-    下单：生成二维码
-     */
-    public static void unifiedOrder() {
-        Map<String, String> resultMap = new HashMap();
+    //下单生成二维码
+    public static void unifiedOrder(Double total_free) {
+        Map<String,String> resultMap = new HashMap();
         String openid = "ouR0E1oP5UGTEBce8jZ_sChfH26g";
         MyConfig config = null;
         cn.juntai.wxpaydemo.sdk.WXPay wxpay = null;
@@ -145,9 +142,9 @@ public class WXPay {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //生成的随机字符串
+        //生成随机字符串
         String nonce_str = WXPayUtil.generateNonceStr();
-        //获取客户端的ip地址
+        //获取客户端ip地址
         //获取本机的ip地址
         InetAddress addr = null;
         try {
@@ -156,54 +153,57 @@ public class WXPay {
             e.printStackTrace();
         }
         String spbill_create_ip = addr.getHostAddress();
-        //支付金额，需要转成字符串类型，否则后面的签名会失败
-        int total_fee = 1000;//100分：1块钱
+        //支付金额,需要转成字符串类型，否则后面会签名失败
+//        int total_free = 100;//100分
+        //double转整数
+        total_free *= 100;
+
+//        total_free = 1.0;
+
+        DecimalFormat decimalFormat = new DecimalFormat("###################.###########");
         //商品描述
-        String body = "路由器";
+        String body = "奶茶";
         //商户订单号
         String out_trade_no = WXPayUtil.generateNonceStr();
         //统一下单接口参数
-        SortedMap<String, String> data = new TreeMap<String, String>();
+        SortedMap<String,String> data = new TreeMap<>();
         data.put("appid", "wxd9a46e74fc279fcc");
         data.put("body", body);
-        data.put("mch_id", "1623889015");
-        // 回调接口，必须是一个域名，不能使用IP
-        // 腾讯会自动调用你（程序自己提供的接口）的接口，给你发送支付结果的数据，数据格式：xml格式
-        data.put("notify_url", "http://419276x8r3.qicp.vip/result");
-        data.put("out_trade_no", out_trade_no);//交易号
-        data.put("spbill_create_ip", spbill_create_ip);//下单的电脑IP地址
-        data.put("trade_type", "NATIVE");//支付类型
-        data.put("total_fee", String.valueOf(total_fee));
-        data.put("openid", openid);
-        data.put("attach","id,11111;price,18.00;amount,1;");
-
-        try {
-            Map<String, String> rMap = wxpay.unifiedOrder(data);
-            System.out.println("统一下单接口返回: " + rMap);
+        data.put("mch_id","1623889015");
+        //接口回调
+        data.put("notify_url", "http://4d82713f06.zicp.vip/result");//花生壳 http://4d82713f06.zicp.vip/result   https://www.juntaitec.cn/api/result
+        data.put("out_trade_no",out_trade_no);
+        data.put("spbill_create_ip", spbill_create_ip);
+        data.put("trade_type", "NATIVE");
+        data.put("total_fee", decimalFormat.format(total_free));
+//        data.put("openid",openid);
+        try{
+            Map<String,String> rMap = wxpay.unifiedOrder(data);
+            System.out.println("统一下单接口返回:" + rMap);
             createQRCode(rMap);//生成二维码
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void createQRCode(Map<String, String> map) throws Exception {
-
-        File outputFile = new File("/Users/liwei/" + File.separator + "new.jpg");
+    public static void createQRCode(Map<String,String> map) throws Exception{
+        File outputFile = new File("src/main/resources/QRcode/" + File.separator + "new.jpg");
         FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
         String url = map.get("code_url");
-        System.out.println("生成二维码的url：" + url);
-        try {
-            Map<EncodeHintType, Object> hints = new HashMap<EncodeHintType, Object>();
-            hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
-            hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
-            hints.put(EncodeHintType.MARGIN, 0);
-            BitMatrix bitMatrix = new MultiFormatWriter().encode(url, BarcodeFormat.QR_CODE, 300, 300, hints);
 
-            MatrixToImageWriter.writeToStream(bitMatrix, "jpg", fileOutputStream);
-        } catch (Exception e) {
+        try {
+            Map<EncodeHintType,Object> hints = new HashMap<>();
+            hints.put(EncodeHintType.CHARACTER_SET,"UTF-8");
+            hints.put(EncodeHintType.ERROR_CORRECTION,ErrorCorrectionLevel.L);
+            hints.put(EncodeHintType.MARGIN,0);
+            BitMatrix bitMatrix = new MultiFormatWriter().encode(url,BarcodeFormat.QR_CODE,300,300,hints);
+
+            MatrixToImageWriter.writeToStream(bitMatrix,"jpg", fileOutputStream);
+        }catch (Exception e) {
             throw new Exception("生成二维码失败！");
-        } finally {
+        }finally {
             fileOutputStream.close();
         }
     }
+
 }

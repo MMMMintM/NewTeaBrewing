@@ -1,5 +1,7 @@
 package cn.edu.guet.hhy;
 
+import cn.juntai.wxpaydemo.pay.WXPay;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
@@ -15,6 +17,7 @@ public class PayGUI extends JFrame {
     JButton pay;
     JButton noPay;
     String[][] data;
+    public Double sum;
 
     public void initPayGUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -80,7 +83,7 @@ public class PayGUI extends JFrame {
         pay.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                wxpay();
             }
         });
 
@@ -94,7 +97,7 @@ public class PayGUI extends JFrame {
     }
 
     public void totalNumber() {
-        Double sum = 0.00;
+         sum = 0.00;
         for (int i = 0; (i < data.length && data[i][0]!=null); i++) {
             sum += Double.parseDouble(data[i][2]) * Double.parseDouble(data[i][3]);
         }
@@ -103,5 +106,8 @@ public class PayGUI extends JFrame {
     public static void main(String[] args) {
         PayGUI payGUI = new PayGUI();
         payGUI.initPayGUI();
+    }
+    public void wxpay() {
+        WXPay.unifiedOrder(sum);
     }
 }

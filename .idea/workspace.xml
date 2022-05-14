@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_14_14__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/PayGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy/PayGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/juntai/wxpaydemo/pay/WXPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/juntai/wxpaydemo/pay/WXPay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/MilkeTeaDao/Impl/MilkeTeaImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/ConnectionHander.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/hld/util/GetCommit.class" afterDir="false" />
@@ -28,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthlySales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetMonthlySales.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTotalSales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/zt/statistics/util/GetTotalSales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/pay/WXPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/juntai/wxpaydemo/pay/WXPay.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Register$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/wzx/Register.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/guet/zt/GetTotalSalesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/edu/guet/zt/GetTotalSalesTest.class" afterDir="false" />
@@ -110,7 +113,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/edu/guet/hzr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/edu/guet/hhy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -118,11 +121,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy" />
+      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\juntai\wxpaydemo\pay" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hzr" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy\bean" />
       <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy\util" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hhy" />
-      <recent name="E:\project_copy\NewTeaBrewing\src\main\resources\tea_picture" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\project_copy\NewTeaBrewing\src\main\java\cn\edu\guet\hld\util" />
@@ -135,7 +138,7 @@
       <recent name="cn.edu.guet.hld.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ManagerGUI">
+  <component name="RunManager" selected="Application.list">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -188,12 +191,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderInfoGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hzr.OrderInfoGUI" />
+    <configuration name="PayGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hhy.PayGUI" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.hzr.*" />
+          <option name="PATTERN" value="cn.edu.guet.hhy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -201,12 +204,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StatisticsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.zt.statistics.StatisticsGUI" />
+    <configuration name="list" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.hhy.list" />
       <module name="NewTeaBrewing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.guet.zt.statistics.*" />
+          <option name="PATTERN" value="cn.edu.guet.hhy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -216,11 +219,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.list" />
+        <item itemvalue="Application.PayGUI" />
         <item itemvalue="Application.ManagerGUI" />
         <item itemvalue="Application.Login" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.OrderInfoGUI" />
-        <item itemvalue="Application.StatisticsGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +254,8 @@
       <workItem from="1652433888389" duration="60000" />
       <workItem from="1652436597635" duration="18923000" />
       <workItem from="1652457869437" duration="1264000" />
-      <workItem from="1652502470941" duration="1715000" />
+      <workItem from="1652502470941" duration="2077000" />
+      <workItem from="1652505426409" duration="1359000" />
     </task>
     <task id="LOCAL-00001" summary="hdl">
       <created>1651302256860</created>
@@ -323,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652459128614</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1">
+      <created>1652505156550</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652505156550</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
