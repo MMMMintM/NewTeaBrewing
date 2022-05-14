@@ -30,15 +30,9 @@ public class ManagerGUI extends JFrame {
         button4 = new JButton();
 
         data = GetItemTable.queryDate(data,head);
-        int iLength = 0;
-        if(data.length%4 == 0){
-            iLength = data.length/4;
-        }else{
-            iLength = data.length/4 + 1;
-        }
 
         //获取路径
-        String[][] path = new String[iLength][4];
+        String[][] path = new String[3][4];
         int k = 0;
         for(int i = 0;i < path.length;i ++)
             for (int j = 0 ;j < path[i].length;j ++)
@@ -57,7 +51,7 @@ public class ManagerGUI extends JFrame {
 
         }
         //获取商品名
-        String[][] name = new String[iLength][4];
+        String[][] name = new String[3][4];
         int k1 = 0;
         for(int i = 0;i < name.length;i ++)
             for (int j = 0 ;j < name[i].length;j ++)
